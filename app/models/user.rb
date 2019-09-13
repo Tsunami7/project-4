@@ -15,10 +15,10 @@
 class User < ApplicationRecord
   has_secure_password
 
-  has_many :matches
-  # def matches 
-  #   Match.where("user1_id = ? OR user2_id = ?", self.id, self.id)
-  # end
+  # has_many :matches
+  def matches 
+    Match.where("user1_id = ? OR user2_id = ?", self.id, self.id)
+  end
 
   validates :social_url, presence: true
   validates :image_link, presence: true

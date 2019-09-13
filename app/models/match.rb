@@ -4,9 +4,10 @@
 #
 #  id           :bigint           not null, primary key
 #  post_comment :string
-#  user_id      :bigint           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  user2_id     :integer
+#  user1_id     :integer
 #
 
 # TODO
@@ -21,6 +22,23 @@
 
 class Match < ApplicationRecord
   
-  validates :user_id, presence: true
-  belongs_to :user
+  # validates :user_id, presence: true
+  # belongs_to :user
+
+  validates :user1_id, presence: true
+  validates :user2_id, presence: true
+  
+  belongs_to :user1,
+    :class_name => "User",
+    :foreign_key => :user1_id
+    
+  belongs_to :user2,
+    :class_name => "User",
+    :foreign_key => :user2_id
+
+  #belongs_to :name_of_association
+  # { foreign_key: :foreign_keys_column,
+  #   class_name: :ClassName }
+
+
 end
