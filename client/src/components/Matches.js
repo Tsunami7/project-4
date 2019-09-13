@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 function Matches(props) {
   return (
     <div className="matches-container">
-      {props.matches.map(match => (
+      {/* {props.matches.map(match => (
         <div
           key={match.id}
           className="match-card"
@@ -19,7 +19,7 @@ function Matches(props) {
             <p>{match.name}</p>
           </h3>
         </div>
-      ))}
+      ))} */}
       <div
         className="match-card"
         onClick={() => props.history.push('/new/match')}>

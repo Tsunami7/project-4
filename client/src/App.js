@@ -4,9 +4,9 @@ import { withRouter } from 'react-router';
 
 import decode from 'jwt-decode';
 
-import Instructors from './components/Instructors'
-import Instructor from './components/Instructor'
-import InstructorCreate from './components/InstructorCreate'
+import Matches from './components/Matches'
+import Match from './components/Match'
+import MatchCreate from './components/MatchCreate'
 
 import Login from './components/Login'
 import Register from './components/Register'
@@ -18,7 +18,7 @@ import {
   destroyMatches,
   loginUser,
   registerUser,
-  verifyUser
+  // verifyUser
 } from './services/api-helper'
 
 import './App.css';
@@ -27,69 +27,67 @@ class App extends Component {
   state = {
     matches: [],
     matchForm: {
-      link: "",
-      photo: ""
+      comment: ""
     },
     currentUser: null,
     authFormData: {
       username: "",
       email: "",
-      password: ""
+      password: "",
+      image_link: "",
+      social_url: ""
     }
   }
 
   getMatches = async () => {
-    const data = await readAllMatches()
+    const matches = await readAllMatches()
     this.setState({
-      matches: data.matches
+      matches
     })
   }
 
   newMatch = async (e) => {
     e.preventDefault()
-    const instructor = await createMatch(this.state.instructorForm)
+    const match = await createMatches(this.state.matchForm)
     this.setState(prevState => ({
-      instructors: [...prevState.instructors, instructor],
-      instructorForm: {
-        name: "",
-        description: "",
-        link: "",
-        photo: ""
+      matches: [...prevState.matches, match],
+      matchForm: {
+        comment: ""
       }
     }))
   }
 
-  editInstructor = async () => {
-    const { instructorForm } = this.state
-    await updateInstructor(instructorForm.id, instructorForm)
+  editMatch = async () => {
+    const { matchForm } = this.state
+    await updateMatches(matchForm.id, matchForm)
     this.setState(prevState => ({
-      instructors: prevState.instructors.map(instructor => instructor.id === instructorForm.id ? instructorForm : instructor)
+      matches: prevState.matches.map(match => match.id === matchForm.id ? matchForm : match)
     }))
   }
 
-  deleteInstructor = async (id) => {
-    await destroyInstructor(id)
+  deleteMatch = async (id) => {
+    await destroyMatches(id)
     this.setState(prevState => ({
-      instructors: prevState.instructors.filter(instructor => instructor.id !== id)
+      matches: prevState.matches.filter(match => match.id !== id)
     }))
   }
 
   handleFormChange = (e) => {
     const { name, value } = e.target
     this.setState(prevState => ({
-      instructorForm: {
-        ...prevState.instructorForm,
+      matchForm: {
+        ...prevState.matchForm,
         [name]: value
       }
     }))
   }
 
   mountEditForm = async (id) => {
-    const instructors = await readAllInstructors()
-    const instructor = instructors.find(el => el.id === parseInt(id))
+    const matches = await readAllMatches()
+    const match = matches.find(el => el.id === parseInt(id))
     this.setState({
-      instructors,
-      instructorForm: instructor
+      matches,
+      matchForm: match
     })
   }
 
@@ -101,9 +99,12 @@ class App extends Component {
 
   handleLogin = async () => {
     const userData = await loginUser(this.state.authFormData);
+    console.log(userData)
     this.setState({
-      currentUser: userData
+      currentUser: decode(userData.token)
+      
     })
+    localStorage.setItem("jwt", userData.token)
   }
 
   handleRegister = async (e) => {
@@ -130,9 +131,11 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    this.getInstructors()
-    const user = await verifyUser();
-    if (user) {
+    this.getMatches()
+    // const checkUser = await verifyUser();
+    const checkUser = localStorage.getItem("jwt");
+    if (checkUser) {
+      const user = decode(checkUser);
       this.setState({
         currentUser: user
       })
@@ -144,13 +147,13 @@ class App extends Component {
       <div>
         <header>
           <h1><Link to='/' onClick={() => this.setState({
-            instructorForm: {
+            matchForm: {
               name: "",
               description: "",
               link: "",
               photo: ""
             }
-          })}>Course App</Link></h1>
+          })}>Get-Roaming</Link></h1>
           <div>
             {this.state.currentUser
               ?
@@ -176,34 +179,34 @@ class App extends Component {
         <Route
           exact path="/"
           render={() => (
-            <Instructors
-              instructors={this.state.instructors}
-              instructorForm={this.state.instructorForm}
+            <Matches
+              matches={this.state.matches}
+              matchForm={this.state.matchForm}
               handleFormChange={this.handleFormChange}
-              newInstructor={this.newInstructor} />
+              newMatches={this.newMatches} />
           )}
         />
         <Route
-          path="/new/instructor"
+          path="/new/match"
           render={() => (
-            <InstructorCreate
+            <MatchCreate
               handleFormChange={this.handleFormChange}
-              instructorForm={this.state.instructorForm}
-              newInstructor={this.newInstructor} />
+              matchForm={this.state.matchForm}
+              newMatches={this.newMatches} />
           )} />
         <Route
-          path="/instructors/:id"
+          path="/matches/:id"
           render={(props) => {
             const { id } = props.match.params;
-            const instructor = this.state.instructors.find(el => el.id === parseInt(id));
-            return <Instructor
+            const match = this.state.matches.find(el => el.id === parseInt(id));
+            return <Match
               id={id}
-              instructor={instructor}
+              match={match}
               handleFormChange={this.handleFormChange}
               mountEditForm={this.mountEditForm}
-              editInstructor={this.editInstructor}
-              instructorForm={this.state.instructorForm}
-              deleteInstructor={this.deleteInstructor} />
+              editMatch={this.editMatch}
+              matchForm={this.state.matchForm}
+              deleteMatch={this.deleteMatch} />
           }}
         />
       </div>

@@ -17,10 +17,11 @@ const Register = (props) => {
         <hr/>
         {/* ------ */}
         <p>Image Link:</p>
-        <input name="image-link" type="password" value={props.formData.password} onChange={props.handleChange} />
+        <input name="image_link" type="text" value={props.formData.image_link} onChange={props.handleChange} />
+        {/* {console.log(image_link)} */}
         <hr/>
         <p>Social URL:</p>
-        <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
+        <input name="social_link" type="text" value={props.formData.social_link} onChange={props.handleChange} />
         <hr/>
         <button>Register</button>
       </form>

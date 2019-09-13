@@ -47,6 +47,6 @@ class MatchesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def match_params
-      params.require(:match).permit(:post_comment, :user_id)
+      params.require(:match).permit(:post_comment, :user1_id, :user2_id)
     end
 end
