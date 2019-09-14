@@ -1,5 +1,6 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3000'
+// const baseUrl = 'http://localhost:3000'
+const baseUrl = 'https://get-roaming.herokuapp.com/'
 
 const api = axios.create({
   baseURL: baseUrl
@@ -10,7 +11,10 @@ export const loginUser = async (loginData) => {
   // console.log(resp)
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
-  return resp.data.user
+  // user does not exist yet at this stage
+  // return resp.data.user
+  // return token?
+  return resp.data.token;
 }
 
 export const registerUser = async (registerData) => {
@@ -18,15 +22,15 @@ export const registerUser = async (registerData) => {
   return resp.data
 }
 
-// export const verifyUser = async () => {
-//   const token = localStorage.getItem('authToken');
-//   if (token) {
-//     api.defaults.headers.common.authorization = `Bearer ${token}`
-//     const resp = await api.get('/users/verify');
-//     return resp.data
-//   }
-//   return false;
-// }
+export const verifyUser = async () => {
+  const token = localStorage.getItem('authToken');
+  if (token) {
+    api.defaults.headers.common.authorization = `Bearer ${token}`
+    const resp = await api.get('/users/verify');
+    return resp.data
+  }
+  return false;
+}
 
 const createMatches = async (data, user_id) => {
   const resp = await api.post(`/users/${user_id}/matches`, { matches: data })

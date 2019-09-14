@@ -98,19 +98,23 @@ class App extends Component {
   }
 
   handleLogin = async () => {
-    const userData = await loginUser(this.state.authFormData);
-    console.log(userData)
+    // const userData = await loginUser(this.state.authFormData);
+    // console.log(userData);
+    const token = await loginUser(this.state.authFormData);
+    
     this.setState({
-      currentUser: decode(userData.token)
-      
+      currentUser: decode(token)
     })
-    localStorage.setItem("jwt", userData.token)
+    // console.log(userData)
+    localStorage.setItem("jwt", token)
+    this.props.history.push("/");
   }
 
   handleRegister = async (e) => {
     e.preventDefault();
     await registerUser(this.state.authFormData);
     this.handleLogin();
+    this.props.history.push("/");
   }
 
   handleLogout = async () => {
@@ -118,6 +122,7 @@ class App extends Component {
     this.setState({
       currentUser: null
     })
+    this.props.history.push("/");
   }
 
   authHandleChange = async (e) => {
@@ -148,10 +153,9 @@ class App extends Component {
         <header>
           <h1><Link to='/' onClick={() => this.setState({
             matchForm: {
-              name: "",
-              description: "",
-              link: "",
-              photo: ""
+              
+              comment: "",
+           
             }
           })}>Get-Roaming</Link></h1>
           <div>

@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 function Matches(props) {
   return (
     <div className="matches-container">
-      {/* {props.matches.map(match => (
+      {props.matches.map(match => (
         <div
           key={match.id}
           className="match-card"
@@ -12,14 +12,14 @@ function Matches(props) {
             props.history.push(`/match/${match.id}`)
             window.scrollTo(0, 0);
           }}>
-          <div className="image-cropper">
+          {/* <div className="image-cropper">
             <img alt={match.name} src={match.photo}/>
           </div>
           <h3>
             <p>{match.name}</p>
-          </h3>
+          </h3> */}
         </div>
-      ))} */}
+      ))}
       <div
         className="match-card"
         onClick={() => props.history.push('/new/match')}>

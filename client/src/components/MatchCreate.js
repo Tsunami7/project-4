@@ -1,40 +1,19 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-function InstructorCreate(props) {
+function MatchCreate(props) {
   return (
     <div className="create-form" >
       <h2>Create a new match</h2>
-      <form onSubmit={props.newInstructor}>
+      <form onSubmit={props.newMatch}>   
 
-        <p>Instructor's name:</p>
-
+        <p>Matches comment:</p>
         <input
           type="text"
-          name="name"
-          value={props.instructorForm.name}
+          name="comment"
+          value={props.matchForm.comment}
           onChange={props.handleFormChange} />
-
-        <p>Photo Link:</p>
-        <input
-          type="text"
-          name="photo"
-          value={props.instructorForm.photo}
-          onChange={props.handleFormChange} />
-
-        <p>Instructor's Description:</p>
-        <input
-          type="text"
-          name="description"
-          value={props.instructorForm.description}
-          onChange={props.handleFormChange} />
-
-        <p>Instructor's Link:</p>
-        <input
-          type="text"
-          name="link"
-          value={props.instructorForm.link}
-          onChange={props.handleFormChange} />
+   
         <br />
         <button>Submit</button>
       </form>
@@ -42,4 +21,4 @@ function InstructorCreate(props) {
   )
 }
 
-export default withRouter(InstructorCreate);
+export default withRouter(MatchCreate);

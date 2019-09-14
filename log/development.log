@@ -1802,3 +1802,972 @@ Processing by UsersController#create as HTML
 Completed 422 Unprocessable Entity in 243ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4526)
 
 
+Started GET "/login" for ::1 at 2019-09-13 22:00:35 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2019-09-13 22:00:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-09-13 22:00:43 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.2ms | Allocations: 196)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 868)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:01:28 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (6.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 49ms (Views: 10.2ms | ActiveRecord: 30.8ms | Allocations: 6380)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:09:58 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (190.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 224ms (Views: 16.6ms | ActiveRecord: 203.3ms | Allocations: 6291)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:10:05 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 267ms (Views: 0.1ms | ActiveRecord: 3.8ms | Allocations: 7229)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:11:18 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 8.6ms | ActiveRecord: 11.3ms | Allocations: 6293)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-13 22:11:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.1ms | Allocations: 919)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:11:58 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 919)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:12:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 240ms (Views: 0.2ms | ActiveRecord: 4.4ms | Allocations: 7070)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:11 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (13.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 359ms (Views: 1.5ms | ActiveRecord: 16.4ms | Allocations: 5403)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:14 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 338ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 3875)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:18 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 254ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 3891)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:18 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:18 -0400
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:18 -0400
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 296ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 5043)
+
+
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+Processing by UsersController#create as HTML
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 538ms (Views: 0.1ms | ActiveRecord: 4.7ms | Allocations: 7725)
+
+
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 267ms (Views: 0.1ms | ActiveRecord: 6.2ms | Allocations: 6402)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:13:24 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.7ms | Allocations: 960)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:30 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:31 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+Processing by UsersController#create as HTML
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 465ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 6266)
+
+
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 234ms (Views: 0.2ms | ActiveRecord: 4.4ms | Allocations: 5457)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:32 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 242ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 3872)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:32 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:32 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 454ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 6158)
+
+
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 234ms (Views: 0.2ms | ActiveRecord: 4.0ms | Allocations: 5455)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:33 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:33 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+  ↳ app/controllers/users_controller.rb:21:in `create'
+[31mUnpermitted parameter: :social_link[0m
+  [1m[36mUser Exists? (221.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 473ms (Views: 0.2ms | ActiveRecord: 223.2ms | Allocations: 6144)
+
+
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 232ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 5598)
+
+
+Started POST "/users" for ::1 at 2019-09-13 22:13:37 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 15ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 5941)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 242ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 3871)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:42 -0400
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Processing by UsersController#create as HTML
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (232.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 493ms (Views: 0.2ms | ActiveRecord: 234.5ms | Allocations: 6147)
+
+
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 243ms (Views: 0.2ms | ActiveRecord: 4.4ms | Allocations: 4666)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:42 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:42 -0400
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[36mUser Exists? (231.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 490ms (Views: 0.1ms | ActiveRecord: 233.3ms | Allocations: 6884)
+
+
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 244ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 5454)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 257ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 3875)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 247ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 3871)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:44 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 241ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 3871)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:46 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+Started POST "/users" for 127.0.0.1 at 2019-09-13 22:13:46 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"garvin", "email"=>"garvin@email.com", "password"=>"[FILTERED]", "image_link"=>"boop", "social_url"=>"", "social_link"=>"boop"}}
+[31mUnpermitted parameter: :social_link[0m
+  [1m[36mUser Exists? (217.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "garvin"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 461ms (Views: 0.2ms | ActiveRecord: 219.9ms | Allocations: 7007)
+
+
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garvin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 228ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 5455)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:18:30 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-13 22:18:31 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started POST "/users" for ::1 at 2019-09-13 22:18:58 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"me4", "email"=>"me4@m4.com", "password"=>"[FILTERED]", "image_link"=>"somthing.com", "social_url"=>"something.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "me4@m4.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (6.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "image_link", "social_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "me4"], ["email", "me4@m4.com"], ["password_digest", "$2a$12$KdCyoHsoGAsaEab4BHcKMeGJnLyNCM1vT2oiAZe6o.ULYW7qSeZwm"], ["image_link", "somthing.com"], ["social_url", "something.com"], ["created_at", "2019-09-14 02:18:59.042739"], ["updated_at", "2019-09-14 02:18:59.042739"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 236ms (Views: 0.9ms | ActiveRecord: 10.2ms | Allocations: 4539)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:18:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me4", "email"=>"me4@m4.com", "password"=>"[FILTERED]", "image_link"=>"somthing.com", "social_url"=>"something.com", "authentication"=>{"username"=>"me4", "email"=>"me4@m4.com", "password"=>"[FILTERED]", "image_link"=>"somthing.com", "social_url"=>"something.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me4"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 218ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 793)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:20:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (3.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 3.4ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:20:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me4", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me4", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me4"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 226ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 768)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:22:12 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-13 22:22:14 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.0ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:33:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 222ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 854)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:34:16 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 4.2ms | Allocations: 920)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:35:49 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 229ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 767)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (7837.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_4_development"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (421.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_4_development"[0m
+  [1m[35m (232.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "project_4_test"[0m
+  [1m[35m (569.1ms)[0m  [1m[35mCREATE DATABASE "project_4_development" ENCODING = 'unicode'[0m
+  [1m[35m (380.5ms)[0m  [1m[35mCREATE DATABASE "project_4_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "matches" CASCADE[0m
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "matches" ("id" bigserial primary key, "post_comment" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user2_id" integer, "user1_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "image_link" character varying, "social_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190913043249)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190912170629),
+(20190912193029);
+
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-14 02:41:20.375669"], ["updated_at", "2019-09-14 02:41:20.375669"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "a413414b881550120f257b3e3e324b3075478c16"], ["created_at", "2019-09-14 02:41:20.385884"], ["updated_at", "2019-09-14 02:41:20.385884"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "matches" CASCADE[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "matches" ("id" bigserial primary key, "post_comment" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user2_id" integer, "user1_id" integer)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (29.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "image_link" character varying, "social_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190913043249)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190912170629),
+(20190912193029);
+
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-14 02:41:20.489215"], ["updated_at", "2019-09-14 02:41:20.489215"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (7.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-09-14 02:41:20.501474"], ["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "a413414b881550120f257b3e3e324b3075478c16"], ["created_at", "2019-09-14 02:41:20.522896"], ["updated_at", "2019-09-14 02:41:20.522896"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "me@me.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "image_link", "social_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "me"], ["email", "me@me.com"], ["password_digest", "$2a$12$0a/VyO3cdL97GdMSHZ3ADOQfk1ZYIS.NvaGVGrti4fTNBPoBWzmvu"], ["image_link", "image_link.com"], ["social_url", "social_link.com"], ["created_at", "2019-09-14 02:41:20.805027"], ["updated_at", "2019-09-14 02:41:20.805027"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "me2@me.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "image_link", "social_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "me2"], ["email", "me2@me.com"], ["password_digest", "$2a$12$tKDqUTLif7ay8DM6cKtuJOtZNijcS.IalWGeIvK59wTgwZWzIkPIu"], ["image_link", "image_link.com"], ["social_url", "social_link2.com"], ["created_at", "2019-09-14 02:41:21.022922"], ["updated_at", "2019-09-14 02:41:21.022922"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMatch Create (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("post_comment", "created_at", "updated_at", "user2_id", "user1_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["post_comment", "something"], ["created_at", "2019-09-14 02:41:21.048975"], ["updated_at", "2019-09-14 02:41:21.048975"], ["user2_id", 2], ["user1_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:41:31 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 0.7ms | Allocations: 5348)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-13 22:41:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.4ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:41:38 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 245ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 6288)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:43:46 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-13 22:43:47 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:44:32 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-13 22:44:33 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:45:28 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:45:35 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 222ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 767)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:49:54 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 44ms (Views: 15.6ms | ActiveRecord: 22.2ms | Allocations: 5461)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:50:03 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 236ms (Views: 0.1ms | ActiveRecord: 3.8ms | Allocations: 6518)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 22:53:25 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 4.2ms | Allocations: 5481)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-13 22:56:35 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 233ms (Views: 0.1ms | ActiveRecord: 3.9ms | Allocations: 6520)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-13 23:05:36 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (3.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 3.7ms | Allocations: 979)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-14 12:11:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 226ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 853)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-14 12:12:32 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.8ms | Allocations: 920)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-14 12:14:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-14 12:15:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.5ms | Allocations: 902)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2019-09-14 12:16:00 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.3ms | Allocations: 1032)
+
+
+  
+NoMethodError (undefined method `authenticate_password' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:6:in `login'
+Started POST "/auth/login" for ::1 at 2019-09-14 12:16:04 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 246ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 766)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2019-09-14 12:16:08 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 1020)
+
+
+  
+NoMethodError (undefined method `authenticate_password' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:6:in `login'
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-14 12:17:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-14 12:17:14 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 1.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-14 12:17:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-14 12:17:39 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-14 12:17:39 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (12.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 1.7ms | ActiveRecord: 12.1ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-14 12:17:46 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 2.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-14 12:17:47 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (5.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 5.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-14 12:17:49 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 1.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-14 12:17:49 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.6ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-14 12:17:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 253ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 767)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-14 12:17:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 292ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 767)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-14 12:18:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-14 12:18:01 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started POST "/users" for ::1 at 2019-09-14 12:19:02 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"me5", "email"=>"m5@me.com", "password"=>"[FILTERED]", "image_link"=>"link.com", "social_url"=>"link.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me5"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m5@me.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "image_link", "social_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "me5"], ["email", "m5@me.com"], ["password_digest", "$2a$12$M4Orq3pWzi8GQJlxsBMvie5sXPYPS9xfhP3wL/tBOvVMl5XMY0rZ6"], ["image_link", "link.com"], ["social_url", "link.com"], ["created_at", "2019-09-14 16:19:03.235540"], ["updated_at", "2019-09-14 16:19:03.235540"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 248ms (Views: 1.8ms | ActiveRecord: 7.9ms | Allocations: 4737)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-14 12:19:03 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me5", "email"=>"m5@me.com", "password"=>"[FILTERED]", "image_link"=>"link.com", "social_url"=>"link.com", "authentication"=>{"username"=>"me5", "email"=>"m5@me.com", "password"=>"[FILTERED]", "image_link"=>"link.com", "social_url"=>"link.com"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me5"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 217ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 767)
+
+

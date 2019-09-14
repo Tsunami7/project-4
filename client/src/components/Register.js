@@ -21,7 +21,7 @@ const Register = (props) => {
         {/* {console.log(image_link)} */}
         <hr/>
         <p>Social URL:</p>
-        <input name="social_link" type="text" value={props.formData.social_link} onChange={props.handleChange} />
+        <input name="social_url" type="text" value={props.formData.social_url} onChange={props.handleChange} />
         <hr/>
         <button>Register</button>
       </form>

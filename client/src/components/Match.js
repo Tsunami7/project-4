@@ -21,10 +21,8 @@ class Match extends Component {
       <div className="match-page">
         {match === undefined ? <h2>Loading . . .</h2> : (
           <div>
-            <img alt={match.name} src={match.photo}/>
-            <h1>{match.name}</h1>
-            <p>{match.description}</p>
-            <a href={match.link}>Connect</a>
+            
+            <p>{match.comments}</p>
             <hr/>
             {this.state.isEdit ?
               <Route path={'/matches/:id/edit'} render={() => (
