@@ -1,6 +1,7 @@
 import axios from 'axios';
-// const baseUrl = 'http://localhost:3000'
-const baseUrl = 'https://get-roaming.herokuapp.com/'
+const baseUrl = 'http://localhost:3000'
+// const baseUrl = 'https://get-roaming.herokuapp.com/'
+
 
 const api = axios.create({
   baseURL: baseUrl
@@ -8,8 +9,9 @@ const api = axios.create({
 
 export const loginUser = async (loginData) => {
   const resp = await api.post('/auth/login', loginData)
-  // console.log(resp)
+  // console.log(resp.data)
   localStorage.setItem('authToken', resp.data.token);
+  localStorage.setItem('userId', resp.data.id);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   // user does not exist yet at this stage
   // return resp.data.user

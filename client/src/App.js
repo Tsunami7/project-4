@@ -17,8 +17,7 @@ import {
   updateMatches,
   destroyMatches,
   loginUser,
-  registerUser,
-  // verifyUser
+  registerUser
 } from './services/api-helper'
 
 import './App.css';
@@ -52,7 +51,7 @@ class App extends Component {
     this.setState(prevState => ({
       matches: [...prevState.matches, match],
       matchForm: {
-        comment: ""
+        comment: " "
       }
     }))
   }
@@ -84,11 +83,12 @@ class App extends Component {
 
   mountEditForm = async (id) => {
     const matches = await readAllMatches()
-    const match = matches.find(el => el.id === parseInt(id))
+    const match = matches.filter(el => el.id === parseInt(id))
     this.setState({
-      matches,
+      matches: match,
       matchForm: match
     })
+    return match
   }
 
   // -------------- AUTH ------------------
@@ -101,13 +101,13 @@ class App extends Component {
     // const userData = await loginUser(this.state.authFormData);
     // console.log(userData);
     const token = await loginUser(this.state.authFormData);
-    
+
     this.setState({
       currentUser: decode(token)
     })
     // console.log(userData)
     localStorage.setItem("jwt", token)
-    this.props.history.push("/");
+    this.props.history.push(`/${localStorage.getItem('userId')}`);
   }
 
   handleRegister = async (e) => {
@@ -137,7 +137,6 @@ class App extends Component {
 
   async componentDidMount() {
     this.getMatches()
-    // const checkUser = await verifyUser();
     const checkUser = localStorage.getItem("jwt");
     if (checkUser) {
       const user = decode(checkUser);
@@ -148,14 +147,13 @@ class App extends Component {
   }
 
   render() {
+    const { id } = this.props.match.params
     return (
       <div>
         <header>
           <h1><Link to='/' onClick={() => this.setState({
             matchForm: {
-              
               comment: "",
-           
             }
           })}>Get-Roaming</Link></h1>
           <div>
@@ -175,33 +173,38 @@ class App extends Component {
             handleLogin={this.handleLogin}
             handleChange={this.authHandleChange}
             formData={this.state.authFormData} />)} />
+            
         <Route exact path="/register" render={() => (
           <Register
             handleRegister={this.handleRegister}
             handleChange={this.authHandleChange}
             formData={this.state.authFormData} />)} />
+
         <Route
-          exact path="/"
+          exact path="/matches/all"
           render={() => (
             <Matches
+              id={id}
+              mountEditForm={this.mountEditForm}
               matches={this.state.matches}
               matchForm={this.state.matchForm}
               handleFormChange={this.handleFormChange}
               newMatches={this.newMatches} />
           )}
         />
+
         <Route
-          path="/new/match"
+          path="/matches/new"
           render={() => (
             <MatchCreate
               handleFormChange={this.handleFormChange}
               matchForm={this.state.matchForm}
               newMatches={this.newMatches} />
           )} />
+
         <Route
           path="/matches/:id"
           render={(props) => {
-            const { id } = props.match.params;
             const match = this.state.matches.find(el => el.id === parseInt(id));
             return <Match
               id={id}
@@ -219,3 +222,19 @@ class App extends Component {
 }
 
 export default withRouter(App);
+
+
+/*
+
+3. once log in show all matches comments for that user.
+so issue was found in the backend where needed to pass use.id to display post comment.
+it was in authentication controller where id: @user.id was added in local 
+- this one needs to be updated to heroku
+how do i get the current user's matches back end?
+how do i get the current user in the back end matches controller?
+
+4. 
+
+
+
+*/

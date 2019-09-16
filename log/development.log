@@ -2771,3 +2771,2351 @@ Processing by AuthenticationController#login as HTML
 Completed 200 OK in 217ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 767)
 
 
+Started GET "/login" for ::1 at 2019-09-15 16:18:25 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-09-15 16:18:32 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.2ms | Allocations: 196)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 868)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:20:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 58ms (Views: 14.2ms | ActiveRecord: 35.5ms | Allocations: 6300)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:20:26 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 919)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 16:20:33 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 248ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 7078)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:21:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 3.7ms | Allocations: 5491)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:21:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:21:54 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.0ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 16:22:01 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 243ms (Views: 0.1ms | ActiveRecord: 3.6ms | Allocations: 6534)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:23:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (9.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 2.4ms | ActiveRecord: 9.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:23:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 2.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:23:12 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (65.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 68ms (Views: 2.1ms | ActiveRecord: 65.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:23:12 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:23:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (25.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 27ms (Views: 1.2ms | ActiveRecord: 25.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:23:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 4.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:24:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:24:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (142.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 145ms (Views: 1.8ms | ActiveRecord: 142.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:26:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (111.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 114ms (Views: 2.4ms | ActiveRecord: 111.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:26:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:26:51 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:26:51 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (13.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 2.9ms | ActiveRecord: 13.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:26:57 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (30.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 33ms (Views: 1.9ms | ActiveRecord: 30.7ms | Allocations: 914)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:26:57 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (8.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 3.4ms | ActiveRecord: 8.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:27:09 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (5.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 5.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:27:09 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:27:12 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:27:12 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:27:36 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:27:36 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (7.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 7.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:27:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 4.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:27:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:28:02 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (44.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 51ms (Views: 5.0ms | ActiveRecord: 44.1ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:28:02 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (6.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 6.9ms | Allocations: 903)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:28:34 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:28:34 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:28:36 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (60.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 64ms (Views: 3.4ms | ActiveRecord: 60.1ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:28:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:29:33 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (54.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 57ms (Views: 3.1ms | ActiveRecord: 54.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:29:33 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 4.4ms | Allocations: 905)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:30:55 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (23.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 25ms (Views: 1.3ms | ActiveRecord: 23.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:31:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:31:10 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (10.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 10.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:31:22 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 16:31:28 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 240ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:31:39 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 2.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:32:02 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:33:15 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:33:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 2.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:33:27 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:33:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (74.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 77ms (Views: 2.3ms | ActiveRecord: 74.1ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:33:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 16:33:51 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 222ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:34:05 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (9.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 2.8ms | ActiveRecord: 9.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:34:05 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (201.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 204ms (Views: 2.1ms | ActiveRecord: 201.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:34:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:34:25 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:34:32 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (47.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 49ms (Views: 2.1ms | ActiveRecord: 47.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:34:33 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (33.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 36ms (Views: 1.7ms | ActiveRecord: 33.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:34:39 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (412.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 415ms (Views: 2.0ms | ActiveRecord: 412.8ms | Allocations: 903)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:34:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:35:47 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (41.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 44ms (Views: 1.9ms | ActiveRecord: 41.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:35:47 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (3.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 3.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:35:51 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (3.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 3.1ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:35:51 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:36:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:36:09 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:36:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:36:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.6ms | Allocations: 902)
+
+
+Started DELETE "/users/undefined/matches/undefined" for ::1 at 2019-09-15 16:36:20 -0400
+Processing by MatchesController#destroy as HTML
+  Parameters: {"user_id"=>"undefined", "id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:46:in `set_match'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.5ms | Allocations: 714)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=undefined):
+  
+app/controllers/matches_controller.rb:46:in `set_match'
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:36:27 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (3.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.2ms | Allocations: 901)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:36:29 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:38:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:38:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:40:49 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (106.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 108ms (Views: 1.3ms | ActiveRecord: 106.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:40:49 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:40:53 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (23.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 25ms (Views: 1.7ms | ActiveRecord: 23.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:40:53 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:40:59 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:40:59 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (8.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 1.6ms | ActiveRecord: 8.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:41:02 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (22.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 2.7ms | ActiveRecord: 22.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:41:02 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:41:14 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (62.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 65ms (Views: 2.1ms | ActiveRecord: 62.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:41:14 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.8ms | Allocations: 905)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:41:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 2.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:41:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 2.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:41:44 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:41:44 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:42:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (20.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 1.6ms | ActiveRecord: 20.1ms | Allocations: 905)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:42:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 4.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:42:23 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:42:23 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:42:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 16:43:10 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 220ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:48:49 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 979)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:50:09 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (3.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 3.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:50:13 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (19.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 1.6ms | ActiveRecord: 19.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:50:16 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 2.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:50:25 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (20.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 2.2ms | ActiveRecord: 20.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:51:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (48.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 50ms (Views: 1.5ms | ActiveRecord: 48.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:51:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:51:48 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 16:51:55 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 225ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 805)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:52:01 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (153.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 156ms (Views: 2.0ms | ActiveRecord: 153.7ms | Allocations: 903)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:52:01 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 16:52:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 16:52:17 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 221ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 17:09:41 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (15.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 1.8ms | ActiveRecord: 15.0ms | Allocations: 979)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 17:10:07 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 17:16:15 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.9ms | Allocations: 979)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 17:16:15 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (5.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 5.5ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 17:16:27 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 221ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 805)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 17:16:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 17:16:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:23:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 2.9ms | Allocations: 980)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:24:21 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 221ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 805)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:47:11 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 1.3ms | Allocations: 979)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:47:40 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:49:36 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:49:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (44.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 46ms (Views: 1.8ms | ActiveRecord: 44.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:49:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.6ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:50:15 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 224ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 804)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:50:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:52:10 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:52:16 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:54:40 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (37.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 42ms (Views: 3.0ms | ActiveRecord: 37.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:54:42 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.7ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:54:51 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 217ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 673)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:54:53 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 238ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 673)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:54:54 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 239ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 673)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:54:58 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (15.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 1.5ms | ActiveRecord: 15.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:54:58 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (88.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 91ms (Views: 2.4ms | ActiveRecord: 88.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:55:11 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (43.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 46ms (Views: 1.7ms | ActiveRecord: 43.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:55:11 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.6ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:55:17 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 222ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 673)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:55:19 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 232ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 673)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:55:19 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 230ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 675)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:55:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:55:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (12.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 1.7ms | ActiveRecord: 12.9ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:55:44 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 222ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 673)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:56:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 228ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:56:44 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:56:44 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:56:54 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:56:55 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:57:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 220ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:58:05 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 2.7ms | Allocations: 903)
+
+
+Started POST "/users" for ::1 at 2019-09-15 18:58:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"why", "email"=>"you@no.com", "password"=>"[FILTERED]", "image_link"=>"work.com", "social_url"=>"work.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "why"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "you@no.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (7.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "image_link", "social_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "why"], ["email", "you@no.com"], ["password_digest", "$2a$12$fVhxvRoHvrP2/skCLX7PGuuoehZlR/UR8RnLk7P77T.uXnr/KFAZa"], ["image_link", "work.com"], ["social_url", "work.com"], ["created_at", "2019-09-15 22:58:36.509429"], ["updated_at", "2019-09-15 22:58:36.509429"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 242ms (Views: 0.9ms | ActiveRecord: 14.4ms | Allocations: 4997)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 18:58:36 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"why", "email"=>"you@no.com", "password"=>"[FILTERED]", "image_link"=>"work.com", "social_url"=>"work.com", "authentication"=>{"username"=>"why", "email"=>"you@no.com", "password"=>"[FILTERED]", "image_link"=>"work.com", "social_url"=>"work.com"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "why"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 231ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 18:58:45 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 19:02:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (98.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 101ms (Views: 1.9ms | ActiveRecord: 98.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 19:03:02 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (49.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 53ms (Views: 3.2ms | ActiveRecord: 49.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 19:03:04 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 4.2ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 19:03:11 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 226ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 777)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 21:14:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 237ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:14:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (24.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 27ms (Views: 1.7ms | ActiveRecord: 24.6ms | Allocations: 920)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 21:16:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 224ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:17:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:17:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.1ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:17:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:20:45 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 4.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:20:45 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:20:58 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:20:58 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started PUT "/users/undefined/matches/undefined" for ::1 at 2019-09-15 21:21:05 -0400
+Processing by MatchesController#update as HTML
+  Parameters: {"matches"=>{"description"=>"new comment"}, "user_id"=>"undefined", "id"=>"undefined", "match"=>{}}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:46:in `set_match'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 612)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=undefined):
+  
+app/controllers/matches_controller.rb:46:in `set_match'
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:21:41 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (98.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 100ms (Views: 1.8ms | ActiveRecord: 98.3ms | Allocations: 901)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:21:41 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:03 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:03 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (6.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 6.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:06 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (50.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 52ms (Views: 1.9ms | ActiveRecord: 50.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:06 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:11 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:11 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:12 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (32.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 35ms (Views: 1.6ms | ActiveRecord: 32.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:12 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:16 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:22:16 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started PUT "/users/undefined/matches/undefined" for ::1 at 2019-09-15 21:22:24 -0400
+Processing by MatchesController#update as HTML
+  Parameters: {"matches"=>{"description"=>"adsdf"}, "user_id"=>"undefined", "id"=>"undefined", "match"=>{}}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:46:in `set_match'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms | Allocations: 608)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=undefined):
+  
+app/controllers/matches_controller.rb:46:in `set_match'
+Started PUT "/users/undefined/matches/undefined" for ::1 at 2019-09-15 21:22:32 -0400
+Processing by MatchesController#update as HTML
+  Parameters: {"matches"=>{"description"=>"adfasdfas.kjdnflakshdf"}, "user_id"=>"undefined", "id"=>"undefined", "match"=>{}}
+  [1m[36mMatch Load (2.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:46:in `set_match'
+Completed 404 Not Found in 4ms (ActiveRecord: 2.5ms | Allocations: 607)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=undefined):
+  
+app/controllers/matches_controller.rb:46:in `set_match'
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 21:24:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 23:02:07 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 235ms (Views: 0.4ms | ActiveRecord: 5.0ms | Allocations: 7648)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 23:02:38 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 252ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 795)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:03:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (14.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 39ms (Views: 9.0ms | ActiveRecord: 26.2ms | Allocations: 5773)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:03:48 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (51.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 53ms (Views: 1.6ms | ActiveRecord: 51.3ms | Allocations: 919)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:03:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 919)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:03:56 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:03:57 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 904)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:03 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:14 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:28 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:32 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:35 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 2.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:45 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:48 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:04:55 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:05:13 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:05:26 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:05:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:06:41 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:06:50 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:06:54 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:07:15 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:07:33 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:07:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:08:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:08:26 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:08:47 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (7.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 7.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:09:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:09:27 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:09:31 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 2.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:09:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:10:30 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:10:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:10:59 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:11:06 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:11:14 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.4ms | Allocations: 905)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:11:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (47.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 50ms (Views: 2.1ms | ActiveRecord: 47.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:11:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:11:39 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:11:41 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:11:46 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:11:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:12:07 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 23:12:43 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 231ms (Views: 0.1ms | ActiveRecord: 7.1ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:13:04 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:13:32 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:13:34 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 2.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:13:39 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:13:50 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 2.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:14:10 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:14:23 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:14:49 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 2.2ms | Allocations: 903)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:14:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (18.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 1.6ms | ActiveRecord: 18.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:17:49 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:17:51 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (23.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 1.9ms | ActiveRecord: 23.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:17:56 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:17:59 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:18:04 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:18:07 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:18:24 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:18:42 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 2.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:19:02 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 23:19:33 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 231ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:28 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:31 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:32 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:44 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:46 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:50 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (21.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 1.8ms | ActiveRecord: 21.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:21:54 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:22:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:22:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:22:26 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 903)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:22:45 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (19.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 1.9ms | ActiveRecord: 19.0ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:22:57 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:23:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:23:02 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (2.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 2.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:23:06 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (25.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 27ms (Views: 1.8ms | ActiveRecord: 25.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:23:21 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:23:30 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:23:46 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (4.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 4.8ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:23:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:23:54 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (3.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 3.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:24:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:24:04 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (43.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 45ms (Views: 1.6ms | ActiveRecord: 43.1ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:24:06 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 1.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (3.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 3.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:25 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.1ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:30 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:39 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:49 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (32.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 35ms (Views: 1.8ms | ActiveRecord: 32.5ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:52 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (1.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.2ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:55 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:26:57 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:27:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 902)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 23:54:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 230ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 6582)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:59:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 28ms (Views: 11.4ms | ActiveRecord: 12.4ms | Allocations: 5531)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-15 23:59:22 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 271ms (Views: 0.2ms | ActiveRecord: 4.9ms | Allocations: 6532)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:59:55 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-15 23:59:59 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (58.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 60ms (Views: 1.5ms | ActiveRecord: 58.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 00:00:04 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started POST "/users" for ::1 at 2019-09-16 00:00:35 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"test2", "email"=>"test2@gmail.com", "password"=>"[FILTERED]", "image_link"=>"link.com", "social_url"=>"link.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test2@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (5.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "image_link", "social_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "test2"], ["email", "test2@gmail.com"], ["password_digest", "$2a$12$K4Y/XCTlUFhK0u.BZpaTMO/ApVv3c3g/pJ0CP.iIy5VG0EdA/yRNm"], ["image_link", "link.com"], ["social_url", "link.com"], ["created_at", "2019-09-16 04:00:36.138995"], ["updated_at", "2019-09-16 04:00:36.138995"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 270ms (Views: 3.2ms | ActiveRecord: 14.4ms | Allocations: 4995)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 00:00:36 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"test2", "email"=>"test2@gmail.com", "password"=>"[FILTERED]", "image_link"=>"link.com", "social_url"=>"link.com", "authentication"=>{"username"=>"test2", "email"=>"test2@gmail.com", "password"=>"[FILTERED]", "image_link"=>"link.com", "social_url"=>"link.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 236ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 777)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 00:07:56 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"test2", "email"=>"test2@gmail.com", "password"=>"[FILTERED]", "image_link"=>"link.com", "social_url"=>"link.com", "authentication"=>{"username"=>"test2", "email"=>"test2@gmail.com", "password"=>"[FILTERED]", "image_link"=>"link.com", "social_url"=>"link.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 234ms (Views: 0.1ms | ActiveRecord: 6.2ms | Allocations: 864)
+
+

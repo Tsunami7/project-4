@@ -7,13 +7,6 @@ function MatchEdit(props) {
       <h3>Edit Match</h3>
       <form onSubmit={props.handleSubmit}>
 
-        <p>Photo Link:</p>
-        <input
-          type="text"
-          name="photo"
-          value={props.userForm.photo}
-          onChange={props.handleFormChange} />
-
         <p>Match Description:</p>
         <input
           type="text"

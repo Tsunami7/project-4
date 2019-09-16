@@ -5,6 +5,13 @@ class MatchesController < ApplicationController
   # GET /matches
   def index
     @matches = Match.all
+    # i need to filter matches by the current user here
+    # how do i get the current, logged in ,user here?
+    @user = @current_user
+    # what do we need to know to google this?
+    # ruby rails
+    # what gems are being used to identify the user? 
+    # jwt and bcrypt
 
     render json: @matches
   end

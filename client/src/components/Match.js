@@ -32,7 +32,7 @@ class Match extends Component {
                     e.preventDefault();
                     this.props.editMatch();
                     this.setState({ isEdit: false })
-                    this.props.history.push(`/matches/${this.props.matchForm.id}`)
+                    this.props.history.push(`/matches/${this.props.matchForm.user1_id}`)
                   }}
                   matchForm={this.props.matchForm} />
               )} />
