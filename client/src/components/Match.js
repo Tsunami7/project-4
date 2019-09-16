@@ -7,7 +7,8 @@ class Match extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isEdit: false
+      isEdit: false,
+      
     }
   }
 
@@ -25,7 +26,7 @@ class Match extends Component {
             <p>{match.comments}</p>
             <hr/>
             {this.state.isEdit ?
-              <Route path={'/matches/:id/edit'} render={() => (
+              <Route path={`/users/${user_id}/matches`} render={() => (
                 <MatchesEdit
                   handleFormChange={this.props.handleFormChange}
                   handleSubmit={(e) => {

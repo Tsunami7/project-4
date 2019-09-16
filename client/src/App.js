@@ -168,20 +168,23 @@ class App extends Component {
             }
           </div>
         </header>
-        <Route exact path="/login" render={() => (
+
+        <Route exact path="/login" 
+        render={() => (
           <Login
             handleLogin={this.handleLogin}
             handleChange={this.authHandleChange}
             formData={this.state.authFormData} />)} />
             
-        <Route exact path="/register" render={() => (
+        <Route exact path="/register" 
+        render={() => (
           <Register
             handleRegister={this.handleRegister}
             handleChange={this.authHandleChange}
             formData={this.state.authFormData} />)} />
 
         <Route
-          exact path="/matches/all"
+          exact path="/matches/:id"
           render={() => (
             <Matches
               id={id}
@@ -233,8 +236,7 @@ it was in authentication controller where id: @user.id was added in local
 how do i get the current user's matches back end?
 how do i get the current user in the back end matches controller?
 
-4. 
-
+4. how to console log out the end point for matches
 
 
 */

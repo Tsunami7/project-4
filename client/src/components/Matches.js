@@ -8,7 +8,7 @@ class Matches extends React.Component {
 
   }
   render() {
-    // console.log(this.props.matches)
+    console.log(this.props.matches)
     return (
       <div className="matches-container">
         {this.props.matches.map(match => (
@@ -17,7 +17,12 @@ class Matches extends React.Component {
             className="match-card"
             onClick={() => {
               this.props.history.push(`/matches/${match.id}`)
+
+              // WHAT AM I TRYING TO DO?
+              // make the match show up for log in user with its own user id
+              // 
               // props.history.push(`users/${id}/matches`)
+              
               window.scrollTo(0, 0);
             }}>
               <p>{match.post_comment}</p>

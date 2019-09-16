@@ -1,6 +1,6 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3000'
-// const baseUrl = 'https://get-roaming.herokuapp.com/'
+// const baseUrl = 'http://localhost:3000'
+const baseUrl = 'https://get-roaming.herokuapp.com/'
 
 
 const api = axios.create({
@@ -41,6 +41,7 @@ const createMatches = async (data, user_id) => {
 
 const readAllMatches = async (user_id) => {
   const resp = await api.get(`/users/${user_id}/matches`)
+  console.log(resp.data)
   return resp.data
 }
 
