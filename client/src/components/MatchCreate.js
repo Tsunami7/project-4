@@ -24,3 +24,13 @@ function MatchCreate(props) {
 }
 
 export default withRouter(MatchCreate);
+
+/* now to create match
+
+1. check if we can create matches by hitting the end point
+
+
+2. 
+
+3. 
+*/

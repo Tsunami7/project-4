@@ -38,12 +38,12 @@ class App extends Component {
     }
   }
 
-  getMatches = async () => {
-    const matches = await readAllMatches()
-    this.setState({
-      matches
-    })
-  }
+  // getMatches = async () => {
+  //   const matches = await readAllMatches()
+  //   this.setState({
+  //     matches
+  //   })
+  // }
 
   newMatch = async (e) => {
     e.preventDefault()
@@ -107,7 +107,8 @@ class App extends Component {
     })
     // console.log(userData)
     localStorage.setItem("jwt", token)
-    this.props.history.push(`/${localStorage.getItem('userId')}`);
+    // this.props.history.push(`/${localStorage.getItem('userId')}`);
+    this.props.history.push(`/matches`);
   }
 
   handleRegister = async (e) => {
@@ -119,6 +120,7 @@ class App extends Component {
 
   handleLogout = async () => {
     localStorage.removeItem("jwt");
+    localStorage.removeItem("authToken"); // token is actually stored here
     this.setState({
       currentUser: null
     })
@@ -136,8 +138,8 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    this.getMatches()
     const checkUser = localStorage.getItem("jwt");
+    // this.getMatches()
     if (checkUser) {
       const user = decode(checkUser);
       this.setState({
@@ -184,7 +186,8 @@ class App extends Component {
             formData={this.state.authFormData} />)} />
 
         <Route
-          exact path="/matches/:id"
+          // exact path="/users/:id/matches/:id"
+          exact path="/matches" // this should only shjow when someone is logged in
           render={() => (
             <Matches
               id={id}
@@ -235,8 +238,16 @@ it was in authentication controller where id: @user.id was added in local
 - this one needs to be updated to heroku
 how do i get the current user's matches back end?
 how do i get the current user in the back end matches controller?
-
 4. how to console log out the end point for matches
+*/
 
-
+/*
+Monday 
+1. find where users comment are connecting
+just check on postman the comment end point this one work so that means is the front end that is not liking it.
+console.log how response is handling it that will be in your api-helper
+ok got the api-helper to console.log res.data[0] 
+also i hit the end point in postman and got http://localhost:3000/users/1/matches to pull the comment line 43 in api-helper
+2. now issue is how come is 
+3. 
 */

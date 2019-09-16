@@ -1,18 +1,21 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :update, :destroy]
-  before_action :authorize_request, except: %i[index show]
+  before_action :authorize_request #, except: %i[index show]  # cannot get current user without auth
 
   # GET /matches
   def index
-    @matches = Match.all
     # i need to filter matches by the current user here
     # how do i get the current, logged in ,user here?
-    @user = @current_user
+    # @user = @current_user
     # what do we need to know to google this?
     # ruby rails
     # what gems are being used to identify the user? 
     # jwt and bcrypt
+    # we need to authroize_request to get @current user
+    # @matches = Match.all
+    @matches = @current_user.matches # we put the logic in the user model
 
+    # render json: @current_user
     render json: @matches
   end
 

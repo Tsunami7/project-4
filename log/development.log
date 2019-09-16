@@ -5628,3 +5628,1645 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-09-16 09:53:54 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]"}
+  Rendering /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 30.9ms | Allocations: 316)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.0ms | Allocations: 1645)
+
+
+Started GET "/login" for ::1 at 2019-09-16 09:54:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/login" for ::1 at 2019-09-16 09:54:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/login" for ::1 at 2019-09-16 09:54:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/login" for ::1 at 2019-09-16 09:55:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/login" for ::1 at 2019-09-16 09:55:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/auth/login" for ::1 at 2019-09-16 09:56:14 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 301ms (Views: 1.3ms | ActiveRecord: 10.1ms | Allocations: 7648)
+
+
+Started GET "/users/1/matches" for ::1 at 2019-09-16 09:57:08 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+  [1m[36mMatch Load (10.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 47ms (Views: 15.6ms | ActiveRecord: 23.8ms | Allocations: 5724)
+
+
+Started POST "/users/1/matches" for ::1 at 2019-09-16 10:10:23 -0400
+Processing by MatchesController#create as */*
+  Parameters: {"post_comment"=>"new comment created", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/users/1/matches" for ::1 at 2019-09-16 11:25:55 -0400
+Processing by MatchesController#create as */*
+  Parameters: {"post_comment"=>"new comment created", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 128)
+
+
+Started GET "/users/1/matches" for ::1 at 2019-09-16 11:27:05 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+  [1m[36mMatch Load (7.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 7.0ms | Allocations: 992)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-16 14:11:44 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 197)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 927)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-09-16 14:11:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:11:45 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (12.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 25ms (Views: 9.6ms | ActiveRecord: 12.8ms | Allocations: 5326)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:11:46 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:11:50 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (69.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 72ms (Views: 2.5ms | ActiveRecord: 69.5ms | Allocations: 919)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:11:53 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:12:03 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1030)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:12:23 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 83)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:12:24 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 83)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:12:24 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 83)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:12:37 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 83)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:12:46 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1043)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:12:47 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 83)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:12:57 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:17:in `index'
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 8.4ms | Allocations: 5493)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:13:54 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 209)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2019-09-16 14:14:05 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 282ms (Views: 0.2ms | ActiveRecord: 4.8ms | Allocations: 6728)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:14:09 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:14:16 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:14:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:14:46 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:15:35 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 209)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:15:40 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:16:14 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:16:39 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:16:50 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:16:51 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:17:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:17:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:17:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:17:21 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:17:21 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:18:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:18:01 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:18:03 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:18:21 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:18:22 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:19:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+Completed 200 OK in 51ms (Views: 1.2ms | ActiveRecord: 21.4ms | Allocations: 9161)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:19:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:20:23 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 14:21:23 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 250ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 6759)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:21:27 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (3.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/controllers/matches_controller.rb:18:in `index'
+Completed 200 OK in 70ms (Views: 11.9ms | ActiveRecord: 28.3ms | Allocations: 11785)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:23:32 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 39ms (Views: 9.8ms | ActiveRecord: 9.2ms | Allocations: 11842)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:23:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 2.8ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:23:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (1.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 1.5ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:23:50 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 7.3ms | Allocations: 1567)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 14:23:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (20.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 298ms (Views: 0.2ms | ActiveRecord: 20.1ms | Allocations: 951)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:24:14 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 51ms (Views: 6.5ms | ActiveRecord: 10.1ms | Allocations: 11848)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:24:15 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.1ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:24:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 1.7ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:25:21 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:25:21 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 6.1ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:25:36 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:25:44 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (29.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 41ms (Views: 2.4ms | ActiveRecord: 37.1ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:25:45 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:26:36 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.1ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:26:55 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 14:27:15 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 237ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 950)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:27:48 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (2.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 2.6ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:27:48 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:29:47 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (27.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 31ms (Views: 1.5ms | ActiveRecord: 27.9ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:29:47 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:30:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (74.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 80ms (Views: 3.2ms | ActiveRecord: 75.0ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:30:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:31:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.1ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:31:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:20 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:31:23 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (20.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 24ms (Views: 1.4ms | ActiveRecord: 20.7ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:23 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:25 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:31:26 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:26 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:31:28 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.8ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:28 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:29 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:42 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:31:56 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/" for ::1 at 2019-09-16 14:38:27 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alex/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2019-09-16 14:38:28 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 385ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 863)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:38:32 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 40ms (Views: 1.8ms | ActiveRecord: 1.4ms | Allocations: 1589)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:38:38 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 6.6ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:38:41 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:38:44 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 14:38:50 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me 123456", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me 123456", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me 123456"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1032)
+
+
+  
+NoMethodError (undefined method `authenticate_password' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:6:in `login'
+Started POST "/auth/login" for ::1 at 2019-09-16 14:38:56 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 250ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 776)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:39:09 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:39:26 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:39:27 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 17ms (Views: 1.7ms | ActiveRecord: 1.1ms | Allocations: 1570)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:39:36 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 1.1ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:39:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (4.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 4.9ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:39:57 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:39:59 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:40:00 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.0ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:40:42 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (98.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (1.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 103ms (Views: 1.5ms | ActiveRecord: 99.8ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:42:40 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 8ms (Views: 1.9ms | ActiveRecord: 4.3ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:42:43 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:42:48 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:42:51 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 14:43:01 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 238ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 673)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 14:43:03 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 238ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:43:05 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.8ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:43:18 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:44:10 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for 127.0.0.1 at 2019-09-16 14:44:13 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:44:17 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches" for ::1 at 2019-09-16 14:48:46 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches" for ::1 at 2019-09-16 14:48:52 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started POST "/users/1/matches" for ::1 at 2019-09-16 14:48:58 -0400
+Processing by MatchesController#create as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "post_comment"=>"new comment created", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started PUT "/users/1/matches" for ::1 at 2019-09-16 14:49:07 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/matches"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/users/1/matches/1" for ::1 at 2019-09-16 14:49:35 -0400
+Processing by MatchesController#update as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "post_comment"=>"new comment created", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 758)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:49:52 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "post_comment"=>"new comment created", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 653)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:49:55 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 652)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:50:00 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches" for ::1 at 2019-09-16 14:50:03 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches" for ::1 at 2019-09-16 14:50:09 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:50:15 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:50:21 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:50:31 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "post_comment"=>"new comment created", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (24.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 27ms (Views: 0.2ms | ActiveRecord: 24.5ms | Allocations: 653)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:50:35 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "post_comment"=>"new comment created", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:50:46 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:50:50 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches" for ::1 at 2019-09-16 14:50:57 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1" for ::1 at 2019-09-16 14:51:03 -0400
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.2ms | ActiveRecord: 10.0ms | Allocations: 700)
+
+
+Started GET "/users/1" for ::1 at 2019-09-16 14:51:09 -0400
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 662)
+
+
+Started GET "/users/" for ::1 at 2019-09-16 14:51:15 -0400
+Processing by UsersController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 127)
+
+
+Started GET "/users/1" for ::1 at 2019-09-16 14:51:19 -0400
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 662)
+
+
+Started GET "/users/1" for ::1 at 2019-09-16 14:51:29 -0400
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 662)
+
+
+Started GET "/users/1" for ::1 at 2019-09-16 14:51:51 -0400
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 662)
+
+
+Started GET "/users/1" for ::1 at 2019-09-16 14:52:05 -0400
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 662)
+
+
+Started GET "/users/1/match" for ::1 at 2019-09-16 14:52:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/match"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:52:17 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:52:24 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:52:35 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (27.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 29ms (Views: 0.2ms | ActiveRecord: 27.1ms | Allocations: 651)
+
+
+Started GET "/users/1/matches" for ::1 at 2019-09-16 14:52:39 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:52:41 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:52:44 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:52:56 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "post_comment"=>"new comment created", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:52:59 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:53:05 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:53:16 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "token"=>"$2a$12$/N80MW.FbBUffO0KDBM3u.wbXKtZ", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:53:28 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/" for ::1 at 2019-09-16 14:53:44 -0400
+Processing by MatchesController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:55:24 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 652)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 14:55:42 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 234ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:55:42 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.9ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 1.8ms | Allocations: 1567)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:55:46 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 652)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:55:54 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 652)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:55:55 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (2.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 652)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:55:56 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 652)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:55:57 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 652)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 14:55:57 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (5.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 0.2ms | ActiveRecord: 5.5ms | Allocations: 652)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 14:56:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 1 OR user2_id = 1)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 1567)
+
+
+Started POST "/auth/login" for ::1 at 2019-09-16 15:00:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>"", "authentication"=>{"username"=>"me2", "email"=>"", "password"=>"[FILTERED]", "image_link"=>"", "social_url"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "me2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 225ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 777)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 15:00:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 15:00:19 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (25.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 29ms (Views: 1.5ms | ActiveRecord: 26.2ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 15:00:22 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 1567)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 15:00:24 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 1570)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 15:01:07 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 1567)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 15:02:09 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 652)
+
+
+Started GET "/users/undefined/matches" for ::1 at 2019-09-16 15:02:26 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `authorize_request'
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE (user1_id = 2 OR user2_id = 2)[0m
+  ↳ app/controllers/matches_controller.rb:19:in `index'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 1.9ms | Allocations: 1567)
+
+
+Started GET "/users/1/matches/1" for ::1 at 2019-09-16 15:03:27 -0400
+Processing by MatchesController#show as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]", "user_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:56:in `set_match'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 652)
+
+
+Started GET "/users/" for ::1 at 2019-09-16 15:03:33 -0400
+Processing by UsersController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 127)
+
+
+Started GET "/users" for ::1 at 2019-09-16 15:03:38 -0400
+Processing by UsersController#index as */*
+  Parameters: {"username"=>"me", "password"=>"[FILTERED]"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 127)
+
+
+Started GET "/auth/login" for ::1 at 2019-09-16 15:03:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/users/1/matches/1" for ::1 at 2019-09-16 15:04:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/users/1/matches/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/users/1/matches/1" for ::1 at 2019-09-16 15:04:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/users/1/matches/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
