@@ -9,21 +9,20 @@ Things you may want to cover:
 
 * System dependencies
 
-- Rails dependencies to install
+- Rails dependencies
     - bcrypt ^3.1.7
     - jwt
     - rack-cors
     - pry-rails
     - annotate
     
-- React dependencies to install
+- React dependencies
     - axios ^0.19.0
     - jwt-decode ^2.2.0
     - react-router-dom ^5.0.1
 
 * Configuration
-
-
+   - 
 
 * Database creation
 
