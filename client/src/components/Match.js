@@ -28,14 +28,15 @@ class Match extends Component {
                 isEdit: true
               })
               this.props.history.push(`/matches/${match.id}/edit`)
-              console.log('match not working', match)
-              console.log('match not working', match.id)
+              // console.log('match not working', match)
+              // console.log('match not working', match.id)
             }}>Edit</button>
             <button onClick={() => {
-              this.props.deleteMatch(match.id);
+              this.props.deleteMatch(match.params.id);//delete issues working
+              console.log(match)
               this.props.history.push('/')
             }}>Delete</button>
-            }
+            
           </div>)}
       </div>)
   }

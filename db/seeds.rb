@@ -9,9 +9,4 @@
 user1 = User.create( username: 'me', email: 'me@me.com', password: '123456', image_link: 'image_link.com', social_url: 'social_link.com' )
 user2 = User.create( username: 'me2', email: 'me2@me.com', password: '1234562', image_link: 'image_link.com', social_url: 'social_link2.com' )
 
-Match.create( post_comment: 'something', user1_id: user1.id, user2_id: user2.id)
-Match.create( post_comment: 'second post', user1_id: user1.id, user2_id: user2.id)
-Match.create( post_comment: 'third post', user1_id: user1.id, user2_id: user2.id)
-Match.create( post_comment: 'fourth post', user1_id: user1.id, user2_id: user2.id)
-Match.create( post_comment: 'fifth post', user1_id: user1.id, user2_id: user2.id)
-Match.create( post_comment: 'sixth post', user1_id: user1.id, user2_id: user2.id)
+Match.create( post_comment: 'click me to edit please ', user1_id: user1.id, user2_id: user2.id)

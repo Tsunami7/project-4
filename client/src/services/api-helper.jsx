@@ -1,6 +1,6 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3000'
-// const baseUrl = 'https://get-roaming.herokuapp.com/'
+// const baseUrl = 'http://localhost:3000'
+const baseUrl = 'https://get-roaming.herokuapp.com/'
 
 
 const api = axios.create({
@@ -79,10 +79,13 @@ const readOneMatches = async (id, user_id) => {
 const updateMatches = async (user_id, match_id, data) => {
   const token = localStorage.getItem('authToken');
   api.defaults.headers.common.authorization = `Bearer ${token}`
-  const path = `/users/${user_id}/matches/${match_id}`
-  console.log("updateMatches path", path)
+  // const path = `/users/${user_id}/matches/${match_id}`
+  console.log(data)
+  // console.log(id)
+  const path = `/users/${user_id}/matches/1`
+  // console.log("updateMatches path", path)
   const resp = await api.put(path, { match: data })
-  console.log('updatematches',resp)
+  // console.log('updatematches',resp)
   
   return resp.data
 }

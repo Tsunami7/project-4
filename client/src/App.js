@@ -58,7 +58,7 @@ class App extends Component {
     this.setState({
       currentUser: decode(token)
     })
-    console.log(this.state.currentUser)
+    // console.log(this.state.currentUser)
   }
 
   newMatch = async (e) => {
@@ -84,15 +84,19 @@ class App extends Component {
     try {
       const user_id = currentUser.user_id
       await updateMatches(user_id, match_id, matchForm)
+      // console.log(user_id)
+      console.log(match_id)
+      // console.log(matchForm)
+
       this.setState(prevState => ({
         matches: prevState.matches.map(match => match.id === match_id ? matchForm : match)
       }))
     } catch (error) {
-      console.error("Probably not logged in", error)
+      // console.error("Probably not logged in", error)
     }
   }
 
-  deleteMatch = async (id) => {
+  deleteMatch = async (id, user_id) => {
     await destroyMatches(id)
     this.setState(prevState => ({
       matches: prevState.matches.filter(match => match.id !== id)
@@ -240,8 +244,7 @@ class App extends Component {
                 handleFormChange={this.handleFormChange}
                 handleSubmit={(e) => {
                   e.preventDefault();
-                  
-                  console.log("DID FORM UPDATE?", this.state.matchForm);
+                  // console.log("DID FORM UPDATE?", this.state.matchForm);
                   this.editMatch(match_id);
                 }}
 
