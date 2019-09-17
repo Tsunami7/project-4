@@ -10,8 +10,8 @@ function MatchEdit(props) {
         <p>Match Description:</p>
         <input
           type="text"
-          name="comment"
-          value={props.matchForm.comment}
+          name="post_comment"
+          value={props.matchForm.post_comment}
           onChange={props.handleFormChange} />
 
         <button>Submit</button>
@@ -22,12 +22,3 @@ function MatchEdit(props) {
 
 export default withRouter(MatchEdit);
 
-
-/*
-- now let allow the user to edit their post
-To Do So:
-// need to check the end point so it got hit in postman
-- matchedit is link to match
-- 
-
-*/

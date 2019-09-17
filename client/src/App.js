@@ -7,6 +7,7 @@ import decode from 'jwt-decode';
 import Matches from './components/Matches'
 import Match from './components/Match'
 import MatchCreate from './components/MatchCreate'
+import MatchesEdit from './components/MatchesEdit'
 
 import Login from './components/Login'
 import Register from './components/Register'
@@ -28,7 +29,7 @@ class App extends Component {
     matches: [],
     matchForm: {
       userToMatch: 2,
-      comment: ""
+      post_comment: ""
     },
     currentUser: null,
     authFormData: {
@@ -41,16 +42,9 @@ class App extends Component {
     randomUser: {}
   }
 
-  // getMatches = async () => {
-  //   const matches = await readAllMatches()
-  //   this.setState({
-  //     matches
-  //   })
-  // }
 
   getRandomUser = async () => {
      let userRandom = await randomUser();
-    //  console.log("RANDOM USER", userRandom);
      this.setState({
        matchForm: {
          userToMatch: userRandom.id
@@ -59,14 +53,23 @@ class App extends Component {
      });
   }
 
+  refreshCurrentUser = () => {
+    let token = localStorage.getItem("authToken")
+    this.setState({
+      currentUser: decode(token)
+    })
+    console.log(this.state.currentUser)
+  }
+
   newMatch = async (e) => {
     e.preventDefault()
-    let userdata = { // we need to include user data
-      user1_id: this.currentUser.id, // this needs to be the current user
-      user2_id: this.matchForm.userToMatch, //this needs to be the other user
+    this.refreshCurrentUser()
+    let userdata = { 
+      user1_id: this.state.currentUser.user_id, 
+      user2_id: this.state.matchForm.userToMatch, 
     };
-    let formdata = { ...this.state.matchForm, ...userdata }; // combine required data with form data
-    const match = await createMatches(formdata); // submit combined
+    let formdata = { ...this.state.matchForm, ...userdata }; 
+    const match = await createMatches(formdata); 
     this.setState(prevState => ({
       matches: [...prevState.matches, match],
       matchForm: {
@@ -75,12 +78,18 @@ class App extends Component {
     }))
   }
 
-  editMatch = async () => {
-    const { matchForm } = this.state
-    await updateMatches(matchForm.id, matchForm)
-    this.setState(prevState => ({
-      matches: prevState.matches.map(match => match.id === matchForm.id ? matchForm : match)
-    }))
+  editMatch = async (match_id) => {
+    this.refreshCurrentUser()
+    const { matchForm, currentUser } = this.state
+    try {
+      const user_id = currentUser.user_id
+      await updateMatches(user_id, match_id, matchForm)
+      this.setState(prevState => ({
+        matches: prevState.matches.map(match => match.id === match_id ? matchForm : match)
+      }))
+    } catch (error) {
+      console.error("Probably not logged in", error)
+    }
   }
 
   deleteMatch = async (id) => {
@@ -117,16 +126,13 @@ class App extends Component {
   }
 
   handleLogin = async () => {
-    // const userData = await loginUser(this.state.authFormData);
-    // console.log(userData);
     const token = await loginUser(this.state.authFormData);
 
+    localStorage.setItem("authToken", token)
+    localStorage.setItem("jwt", token)
     this.setState({
       currentUser: decode(token)
     })
-    // console.log(userData)
-    localStorage.setItem("jwt", token)
-    // this.props.history.push(`/${localStorage.getItem('userId')}`);
     this.props.history.push(`/matches`);
   }
 
@@ -139,7 +145,7 @@ class App extends Component {
 
   handleLogout = async () => {
     localStorage.removeItem("jwt");
-    localStorage.removeItem("authToken"); // token is actually stored here
+    localStorage.removeItem("authToken"); 
     this.setState({
       currentUser: null
     })
@@ -161,7 +167,6 @@ class App extends Component {
     if (checkUser) {
       const user = decode(checkUser);
       this.getRandomUser();
-      // console.log(user);
       this.setState({
         currentUser: user
       })
@@ -206,8 +211,7 @@ class App extends Component {
             formData={this.state.authFormData} />)} />
 
         <Route
-          // exact path="/users/:id/matches/:id"
-          exact path="/matches" // this should only shjow when someone is logged in
+          exact path="/matches" 
           render={() => (
             <Matches
               id={id}
@@ -228,24 +232,37 @@ class App extends Component {
               newMatches={this.newMatches}
               randomUser={this.state.randomUser} />
               )} />
+          <Route path={'/matches/:match_id/edit/'}
+            render={(props) => {
+              const match_id = props.match.params.match_id
+              
+              return <MatchesEdit
+                handleFormChange={this.handleFormChange}
+                handleSubmit={(e) => {
+                  e.preventDefault();
+                  
+                  console.log("DID FORM UPDATE?", this.state.matchForm);
+                  this.editMatch(match_id);
+                }}
+
+                matchForm={this.state.matchForm} />
+              }} />
 
           <Route
             path="/matches/:id"
             render={(props) => {
               let id = props.match.params.id;
-              // console.log("PROPS FROM MATCH ROUTE", props)
-              // console.log("ID FROM MATCH ROUTE", id);
               const match = this.state.matches.find(el => el.id === parseInt(id));
               return <Match
-              id={id}
-              match={match}
-              handleFormChange={this.handleFormChange}
-              mountEditForm={this.mountEditForm}
+                id={id}
+                match={match}
+                handleFormChange={this.handleFormChange}
+                mountEditForm={this.mountEditForm}
                 editMatch={this.editMatch}
                 matchForm={this.state.matchForm}
                 deleteMatch={this.deleteMatch} />
-              }}
-              />
+            }}
+          />
           </Switch>
       </div>
     );
@@ -254,25 +271,3 @@ class App extends Component {
 
 export default withRouter(App);
 
-
-/*
-
-3. once log in show all matches comments for that user.
-so issue was found in the backend where needed to pass use.id to display post comment.
-it was in authentication controller where id: @user.id was added in local 
-- this one needs to be updated to heroku
-how do i get the current user's matches back end?
-how do i get the current user in the back end matches controller?
-4. how to console log out the end point for matches
-*/
-
-/*
-Monday 
-1. find where users comment are connecting
-just check on postman the comment end point this one work so that means is the front end that is not liking it.
-console.log how response is handling it that will be in your api-helper
-ok got the api-helper to console.log res.data[0] 
-also i hit the end point in postman and got http://localhost:3000/users/1/matches to pull the comment line 43 in api-helper
-2. now issue is how come is 
-3. 
-*/

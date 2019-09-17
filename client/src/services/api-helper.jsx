@@ -50,7 +50,7 @@ const createMatches = async (data, id) => {
   const token = localStorage.getItem('authToken');
   if (token){
     api.defaults.headers.common.authorization = `Bearer ${token}`
-    const resp = await api.post(`/users/${id}/matches`, { matches: data })
+    const resp = await api.post(`/users/${id}/matches`, { match: data })
     return resp.data
   } else {
     console.error('Cannot create match when not logged in')
@@ -76,8 +76,12 @@ const readOneMatches = async (id, user_id) => {
 
 }
 
-const updateMatches = async (id, data, user_id) => {
-  const resp = await api.put(`/users/${user_id}/edit/${id}`, { matches: data })
+const updateMatches = async (user_id, match_id, data) => {
+  const token = localStorage.getItem('authToken');
+  api.defaults.headers.common.authorization = `Bearer ${token}`
+  const path = `/users/${user_id}/matches/${match_id}`
+  console.log("updateMatches path", path)
+  const resp = await api.put(path, { match: data })
   console.log('updatematches',resp)
   
   return resp.data

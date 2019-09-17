@@ -10,13 +10,13 @@ function MatchCreate(props) {
       <UserProfile user={props.randomUser} />
       {/* <h2>Create a new match</h2> */}
       <form onSubmit={props.newMatches}>   
-
+      {/* <p>{match.comments}</p> */}
         <p>Message</p>
         <input
         
           type="text"
-          name="comment"
-          value={props.matchForm.comment}
+          name="post_comment"
+          value={props.matchForm.post_comment}
           onChange={props.handleFormChange} />
    
         <br />
