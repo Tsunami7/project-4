@@ -1,6 +1,7 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :update, :destroy]
-  before_action :authorize_request #, except: %i[index show]  # cannot get current user without auth
+  # before_action :authorize_request #, except: %i[index show]  # cannot get current user without auth
+  before_action :authorize_request, except: %i[create]  
 
   # GET /matches
   def index
@@ -23,6 +24,10 @@ class MatchesController < ApplicationController
   def show
     
     render json: @match
+  end
+
+  def random
+    render json: User.random 
   end
 
   # POST /matches

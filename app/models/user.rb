@@ -20,6 +20,18 @@ class User < ApplicationRecord
     Match.where("user1_id = ? OR user2_id = ?", self.id, self.id)
   end
 
+  # so once it is generate a random user then 
+  # so then once it accepts then hit that controller then set then in the match table
+  # then hit the random post action in th controller
+  # which will create a new match
+  def self.random
+    User.find(User.pluck(:id).sample)
+  end
+
+  def as_json(options = {})
+    super(options.merge({ except: [:password_digest] }))
+  end
+
   validates :social_url, presence: true
   validates :image_link, presence: true
   validates :username, presence: true, uniqueness: true
@@ -32,3 +44,9 @@ class User < ApplicationRecord
   
 
 end
+# a user has one match
+# and the match table has 
+# attach http://localhost:3000/matches/random
+# then bind 
+# 
+# 

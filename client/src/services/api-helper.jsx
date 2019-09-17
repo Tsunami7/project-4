@@ -34,12 +34,29 @@ export const verifyUser = async () => {
   return false;
 }
 
+export const randomUser = async () => {
+  const token = localStorage.getItem('authToken');
+  if (token) {
+    api.defaults.headers.common.authorization = `Bearer ${token}`
+    const resp = await api.get(`/matches/random`)
+    // console.log("RANDOM USER", resp);
+    return resp.data
+  } else {
+    console.error('Cannot get ranom match when not logged in')
+  }  
+}
+
 const createMatches = async (data, id) => {
+  const token = localStorage.getItem('authToken');
+  if (token){
+    api.defaults.headers.common.authorization = `Bearer ${token}`
+    const resp = await api.post(`/users/${id}/matches`, { matches: data })
+    return resp.data
+  } else {
+    console.error('Cannot create match when not logged in')
+  }  
 
-  
-  const resp = await api.post(`/users/${id}/matches`, { matches: data })
-
-  return resp.data
+  return false
 }
 
 const readAllMatches = async (data, id) => {
@@ -47,7 +64,7 @@ const readAllMatches = async (data, id) => {
   const token = localStorage.getItem('authToken');
   api.defaults.headers.common.authorization = `Bearer ${token}`
   const resp = await api.get(`/users/${id}/matches`) // need to send JWT
-  console.log(resp)
+  // console.log(resp)
   // console.log(resp.data[0].post_comment)
 
   return resp.data
@@ -60,7 +77,9 @@ const readOneMatches = async (id, user_id) => {
 }
 
 const updateMatches = async (id, data, user_id) => {
-  const resp = await api.put(`/users/${user_id}/matches/${id}`, { matches: data })
+  const resp = await api.put(`/users/${user_id}/edit/${id}`, { matches: data })
+  console.log('updatematches',resp)
+  
   return resp.data
 }
 
@@ -81,5 +100,5 @@ export {
   readAllMatches,
   readOneMatches,
   updateMatches,
-  destroyMatches
+  destroyMatches,
 }

@@ -29,12 +29,12 @@ class Matches extends React.Component {
     if (localStorage.getItem("authToken") !== null ){
       this.getMatches()
     } else {
-      console.log("USER NOT LOGGED IN YET")
+      // console.log("USER NOT LOGGED IN YET")
     }
   }
 
   render() {
-    console.log("MATCHES RENDER",this.props.matches)
+    // console.log("MATCHES RENDER",this.props.matches)
     return (
       <div className="matches-container">
         {this.state.matches.map(match => (
@@ -64,7 +64,7 @@ class Matches extends React.Component {
         <div
           className="match-card"
           // onClick={() => props.history.push('/new/match')}>
-          onClick={() => this.props.history.push(`new/match`)}>
+          onClick={() => this.props.history.push(`/matches/new`)}>
           <img
             alt="Create a new match"
             src="https://image.flaticon.com/icons/png/512/14/14980.png"

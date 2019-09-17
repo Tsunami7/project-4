@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 import { withRouter } from 'react-router';
 
 import decode from 'jwt-decode';
@@ -17,7 +17,8 @@ import {
   updateMatches,
   destroyMatches,
   loginUser,
-  registerUser
+  registerUser,
+  randomUser
 } from './services/api-helper'
 
 import './App.css';
@@ -26,6 +27,7 @@ class App extends Component {
   state = {
     matches: [],
     matchForm: {
+      userToMatch: 2,
       comment: ""
     },
     currentUser: null,
@@ -35,7 +37,8 @@ class App extends Component {
       password: "",
       image_link: "",
       social_url: ""
-    }
+    },
+    randomUser: {}
   }
 
   // getMatches = async () => {
@@ -45,13 +48,29 @@ class App extends Component {
   //   })
   // }
 
+  getRandomUser = async () => {
+     let userRandom = await randomUser();
+    //  console.log("RANDOM USER", userRandom);
+     this.setState({
+       matchForm: {
+         userToMatch: userRandom.id
+       },
+       randomUser: userRandom
+     });
+  }
+
   newMatch = async (e) => {
     e.preventDefault()
-    const match = await createMatches(this.state.matchForm)
+    let userdata = { // we need to include user data
+      user1_id: this.currentUser.id, // this needs to be the current user
+      user2_id: this.matchForm.userToMatch, //this needs to be the other user
+    };
+    let formdata = { ...this.state.matchForm, ...userdata }; // combine required data with form data
+    const match = await createMatches(formdata); // submit combined
     this.setState(prevState => ({
       matches: [...prevState.matches, match],
       matchForm: {
-        comment: " "
+        comment: ""
       }
     }))
   }
@@ -138,10 +157,11 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const checkUser = localStorage.getItem("jwt");
-    // this.getMatches()
+    const checkUser = localStorage.getItem("authToken");
     if (checkUser) {
       const user = decode(checkUser);
+      this.getRandomUser();
+      // console.log(user);
       this.setState({
         currentUser: user
       })
@@ -198,30 +218,35 @@ class App extends Component {
               newMatches={this.newMatches} />
           )}
         />
-
-        <Route
-          path="/matches/new"
-          render={() => (
-            <MatchCreate
+        <Switch>
+          <Route
+            path="/matches/new"
+            render={() => (
+              <MatchCreate
               handleFormChange={this.handleFormChange}
               matchForm={this.state.matchForm}
-              newMatches={this.newMatches} />
-          )} />
+              newMatches={this.newMatches}
+              randomUser={this.state.randomUser} />
+              )} />
 
-        <Route
-          path="/matches/:id"
-          render={(props) => {
-            const match = this.state.matches.find(el => el.id === parseInt(id));
-            return <Match
+          <Route
+            path="/matches/:id"
+            render={(props) => {
+              let id = props.match.params.id;
+              // console.log("PROPS FROM MATCH ROUTE", props)
+              // console.log("ID FROM MATCH ROUTE", id);
+              const match = this.state.matches.find(el => el.id === parseInt(id));
+              return <Match
               id={id}
               match={match}
               handleFormChange={this.handleFormChange}
               mountEditForm={this.mountEditForm}
-              editMatch={this.editMatch}
-              matchForm={this.state.matchForm}
-              deleteMatch={this.deleteMatch} />
-          }}
-        />
+                editMatch={this.editMatch}
+                matchForm={this.state.matchForm}
+                deleteMatch={this.deleteMatch} />
+              }}
+              />
+          </Switch>
       </div>
     );
   }
