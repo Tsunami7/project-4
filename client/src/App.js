@@ -244,7 +244,6 @@ class App extends Component {
                 handleFormChange={this.handleFormChange}
                 handleSubmit={(e) => {
                   e.preventDefault();
-                  // console.log("DID FORM UPDATE?", this.state.matchForm);
                   this.editMatch(match_id);
                 }}
 
