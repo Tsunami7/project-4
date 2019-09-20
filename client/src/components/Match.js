@@ -27,9 +27,9 @@ class Match extends Component {
               this.setState({
                 isEdit: true
               })
-              this.props.history.push(`/matches/${match.id}/edit`)
+              this.props.history.push(`/matches/${match.params.id}/edit`)
               // console.log('match not working', match)
-              // console.log('match not working', match.id)
+              // console.log('match not working', match.params.id)
             }}>Edit</button>
             <button onClick={() => {
               this.props.deleteMatch(match.params.id);//delete issues working

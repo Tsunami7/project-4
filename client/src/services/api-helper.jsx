@@ -79,11 +79,11 @@ const readOneMatches = async (id, user_id) => {
 const updateMatches = async (user_id, match_id, data) => {
   const token = localStorage.getItem('authToken');
   api.defaults.headers.common.authorization = `Bearer ${token}`
-  // const path = `/users/${user_id}/matches/${match_id}`
+  const path = `/users/${user_id}/matches/${match_id}`
   console.log(data)
-  // console.log(id)
-  const path = `/users/${user_id}/matches/1`
-  // console.log("updateMatches path", path)
+  
+  // const path = `/users/${user_id}/matches/1`
+  
   const resp = await api.put(path, { match: data })
   // console.log('updatematches',resp)
   
@@ -94,6 +94,13 @@ const destroyMatches = async (id, user_id) => {
   const resp = await api.delete(`/users/${user_id}/matches/${id}`)
   return resp.data
 
+}
+
+// 
+const createComment = async()=>{
+  const token = localStorage.getItem('authToken');
+  api.defaults.headers.common.authorization = `Bearer ${token}`
+  const path = ``
 }
 
 

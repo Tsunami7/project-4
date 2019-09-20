@@ -2,31 +2,43 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import UserProfile from "./UserProfile"
 
-function MatchCreate(props) {
+class MatchCreate extends React.Component {
+  constructor(props){
+    super(props)
+    this.state={
+      userToMatch: 2,
+      post_comment: "",
+      value:''
+    }
+  }
+  // state 
+  // function
 
-  return (
-    <div className="create-form" >
+  render() {
+    return (
+      <div className="create-form" >
 
-      <UserProfile user={props.randomUser} />
-      {/* <h2>Create a new match</h2> */}
-      <form onSubmit={props.newMatches}>
-        {/* <p>{match.comments}</p> */}
-        <p>Message</p>
-        <input
+        <UserProfile user={this.props.randomUser} />
+        {/* <h2>Create a new match</h2> */}
+        <form onSubmit={this.props.newMatches}>
+          {/* <p>{match.comments}</p> */}
+          <p>Write Message</p>
+          <input
 
-          type="text"
-          name="post_comment"
-          value={props.matchForm.post_comment}
-          onChange={props.handleFormChange} />
+            type="text"
+            name="post_comment"
+            value={this.props.matchForm.value}
+            onChange={this.props.handleFormChange} />
 
-        <br />
-        {/* <p>{props.matchForm.userToMatch}</p> */}
-        <button>Yes</button>
-        <button>No</button>
-      </form>
+          <br />
+          {/* <p>{props.matchForm.userToMatch}</p> */}
+          <button>Yes</button>
+          <button>No</button>
+        </form>
 
-    </div >
-  )
+      </div >
+    )
+  }
 }
 
 export default withRouter(MatchCreate);

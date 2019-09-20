@@ -25,6 +25,7 @@ import {
 import './App.css';
 
 class App extends Component {
+
   state = {
     matches: [],
     matchForm: {
@@ -44,13 +45,13 @@ class App extends Component {
 
 
   getRandomUser = async () => {
-     let userRandom = await randomUser();
-     this.setState({
-       matchForm: {
-         userToMatch: userRandom.id
-       },
-       randomUser: userRandom
-     });
+    let userRandom = await randomUser();
+    this.setState({
+      matchForm: {
+        userToMatch: userRandom.id
+      },
+      randomUser: userRandom
+    });
   }
 
   refreshCurrentUser = () => {
@@ -64,12 +65,12 @@ class App extends Component {
   newMatch = async (e) => {
     e.preventDefault()
     this.refreshCurrentUser()
-    let userdata = { 
-      user1_id: this.state.currentUser.user_id, 
-      user2_id: this.state.matchForm.userToMatch, 
+    let userdata = {
+      user1_id: this.state.currentUser.user_id,
+      user2_id: this.state.matchForm.userToMatch,
     };
-    let formdata = { ...this.state.matchForm, ...userdata }; 
-    const match = await createMatches(formdata); 
+    let formdata = { ...this.state.matchForm, ...userdata };
+    const match = await createMatches(formdata);
     this.setState(prevState => ({
       matches: [...prevState.matches, match],
       matchForm: {
@@ -149,7 +150,7 @@ class App extends Component {
 
   handleLogout = async () => {
     localStorage.removeItem("jwt");
-    localStorage.removeItem("authToken"); 
+    localStorage.removeItem("authToken");
     this.setState({
       currentUser: null
     })
@@ -191,31 +192,36 @@ class App extends Component {
             {this.state.currentUser
               ?
               <>
+                <Link to='/matches'> Home </Link>
                 <p>{this.state.currentUser.username}</p>
                 <button onClick={this.handleLogout}>Logout</button>
               </>
               :
               <button onClick={this.handleLoginButton}>Login / Register</button>
             }
+            {/* <Link>Home</Link> */}
           </div>
         </header>
 
-        <Route exact path="/login" 
-        render={() => (
-          <Login
-            handleLogin={this.handleLogin}
-            handleChange={this.authHandleChange}
-            formData={this.state.authFormData} />)} />
-            
-        <Route exact path="/register" 
-        render={() => (
-          <Register
-            handleRegister={this.handleRegister}
-            handleChange={this.authHandleChange}
-            formData={this.state.authFormData} />)} />
+        <Route exact path="/login"
+          render={() => (
+            <Login
+              handleLogin={this.handleLogin}
+              handleChange={this.authHandleChange}
+              formData={this.state.authFormData}
+            />
+          )}
+        />
+
+        <Route exact path="/register"
+          render={() => (
+            <Register
+              handleRegister={this.handleRegister}
+              handleChange={this.authHandleChange}
+              formData={this.state.authFormData} />)} />
 
         <Route
-          exact path="/matches" 
+          exact path="/matches"
           render={() => (
             <Matches
               id={id}
@@ -231,15 +237,15 @@ class App extends Component {
             path="/matches/new"
             render={() => (
               <MatchCreate
-              handleFormChange={this.handleFormChange}
-              matchForm={this.state.matchForm}
-              newMatches={this.newMatches}
-              randomUser={this.state.randomUser} />
-              )} />
+                handleFormChange={this.handleFormChange}
+                matchForm={this.state.matchForm}
+                newMatches={this.newMatches}
+                randomUser={this.state.randomUser} />
+            )} />
           <Route path={'/matches/:match_id/edit/'}
             render={(props) => {
               const match_id = props.match.params.match_id
-              
+
               return <MatchesEdit
                 handleFormChange={this.handleFormChange}
                 handleSubmit={(e) => {
@@ -248,7 +254,7 @@ class App extends Component {
                 }}
 
                 matchForm={this.state.matchForm} />
-              }} />
+            }} />
 
           <Route
             path="/matches/:id"
@@ -265,7 +271,7 @@ class App extends Component {
                 deleteMatch={this.deleteMatch} />
             }}
           />
-          </Switch>
+        </Switch>
       </div>
     );
   }
@@ -273,3 +279,25 @@ class App extends Component {
 
 export default withRouter(App);
 
+
+/*
+So user will make a match then user will be able to write a comment. Then post this comment and then should be able to edit this post and then delete this post.
+*/
+
+/*
+things done:
+- got a home link for user login
+- fix value warning for updting message
+- fix the routing issues when i used updateMatches from apihelper had to add params.id from id in match.js 
+
+- to generate new table:
+  rails g scaffold Comment 
+*/
+
+/*
+things to do:
+- create new table for comments
+- make sure to console log everything
+- attach this to apihelpers
+- attach these on to front-end 
+*/
