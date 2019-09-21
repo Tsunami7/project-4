@@ -5,14 +5,21 @@ import UserProfile from "./UserProfile"
 class MatchCreate extends React.Component {
   constructor(props){
     super(props)
-    this.state={
-      userToMatch: 2,
-      post_comment: "",
-      value:''
-    }
+    // this.state={
+    //   userToMatch: 2,
+    //   post_comment: "",
+    //   value:''
+    // }
   }
   // state 
   // function
+
+  async componentDidMount() {
+    const checkUser = localStorage.getItem("authToken");
+    if (checkUser) {
+      this.props.getRandomUser();
+    }
+  }
 
   render() {
     return (
@@ -20,7 +27,7 @@ class MatchCreate extends React.Component {
 
         <UserProfile user={this.props.randomUser} />
         {/* <h2>Create a new match</h2> */}
-        <form onSubmit={this.props.newMatches}>
+        <form onSubmit={this.props.newMatch}>
           {/* <p>{match.comments}</p> */}
           <p>Write Message</p>
           <input
@@ -33,8 +40,8 @@ class MatchCreate extends React.Component {
           <br />
           {/* <p>{props.matchForm.userToMatch}</p> */}
           <button>Yes</button>
-          <button>No</button>
         </form>
+        <button>No</button>
 
       </div >
     )

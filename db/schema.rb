@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_13_043249) do
+ActiveRecord::Schema.define(version: 2019_09_20_170222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "comment"
+    t.bigint "match_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["match_id"], name: "index_comments_on_match_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "matches", force: :cascade do |t|
     t.string "post_comment"
@@ -33,4 +43,6 @@ ActiveRecord::Schema.define(version: 2019_09_13_043249) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "matches"
+  add_foreign_key "comments", "users"
 end
