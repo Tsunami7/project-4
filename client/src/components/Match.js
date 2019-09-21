@@ -33,7 +33,7 @@ class Match extends Component {
             }}>Edit</button>
             <button onClick={() => {
               this.props.deleteMatch(match.params.id);//delete issues working
-              console.log(match)
+              // console.log(match)
               this.props.history.push('/matches')
             }}>Delete</button>
             

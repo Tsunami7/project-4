@@ -85,6 +85,8 @@ class App extends Component {
         post_comment: ""
       }
     }))
+    // this.props.history.push(`/matches`)
+    this.getRandomUser(); // get a new user to show
   }
 
   editMatch = async (match_id) => {
@@ -189,7 +191,7 @@ class App extends Component {
   // -----------Comment---------------
   getAllComments = async() =>{
     let allComments = await getAllComment();
-    console.log(allComments)
+    console.log(allComments);
 
   }
 
@@ -296,6 +298,7 @@ class App extends Component {
           // so im linking my component here to be able to test the route by console.log
             path='/matches/:match_id/comments/:id'
             render={(props)=>{
+              console.log('here working')
               let id = props.comment.params.id;
               const comment = this.state.comment.findAll(id);
               return <GetAllComment

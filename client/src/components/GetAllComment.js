@@ -4,7 +4,7 @@ class GetAllComment extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      comment: '',
+      comments: [],
       isEdit: false,
       // value: ''
     }
@@ -50,7 +50,7 @@ class GetAllComment extends Component {
                     isEdit: true
                   })
                   // test path here
-                  console.log('')
+                  console.log('comment to edit',comment)
                 }}
                 // needs path to be check before finalizing
               >Edit</button>
@@ -72,20 +72,12 @@ export default GetAllComment;
 
 // how to make a mock component to do test?
 /*
-questions:
-should i pretty much recreate what is inside match.js?
-not everything, the ids are diferent,
-because match.js belonds to two users
-and comments belong to matches
 
-in this component i will the other comment components
+** to do:
+KEEP TO A 20/5 MINUTE TIMER
 
-***
-question regarding the write message promt in the match screen,
-where does that go or where is this store?
-can i use that to create the comment?
-
-
+1. get all comments
+2. show all comments
 
 
 */
