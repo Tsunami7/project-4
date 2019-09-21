@@ -42,5 +42,11 @@ class Match extends Component {
   }
 }
 
+// in order to create comment i need to set the api helper route
+// api helper function to create posts
 
+
+
+// then come to match.js to connect the route for creating the comment
+// 
   export default withRouter(Match);

@@ -43,18 +43,18 @@ export const randomUser = async () => {
     return resp.data
   } else {
     console.error('Cannot get ranom match when not logged in')
-  }  
+  }
 }
 
-const createMatches = async (data, id) => {
+const createMatches = async (data) => {
   const token = localStorage.getItem('authToken');
-  if (token){
+  if (token) {
     api.defaults.headers.common.authorization = `Bearer ${token}`
-    const resp = await api.post(`/users/${id}/matches`, { match: data })
+    const resp = await api.post(`/users/${data.user1_id}/matches`, { match: data })
     return resp.data
   } else {
     console.error('Cannot create match when not logged in')
-  }  
+  }
 
   return false
 }
@@ -64,7 +64,7 @@ const readAllMatches = async (data, id) => {
   const token = localStorage.getItem('authToken');
   api.defaults.headers.common.authorization = `Bearer ${token}`
   const resp = await api.get(`/users/${id}/matches`) // need to send JWT
-  // console.log(resp)
+  console.log('ReadAllMatches',resp)
   // console.log(resp.data[0].post_comment)
 
   return resp.data
@@ -72,6 +72,7 @@ const readAllMatches = async (data, id) => {
 
 const readOneMatches = async (id, user_id) => {
   const resp = await api.get(`/users/${user_id}/matches/${id}`)
+  // console.log(resp);
   return resp.data
 
 }
@@ -81,12 +82,12 @@ const updateMatches = async (user_id, match_id, data) => {
   api.defaults.headers.common.authorization = `Bearer ${token}`
   const path = `/users/${user_id}/matches/${match_id}`
   console.log(data)
-  
+
   // const path = `/users/${user_id}/matches/1`
-  
+
   const resp = await api.put(path, { match: data })
   // console.log('updatematches',resp)
-  
+
   return resp.data
 }
 
@@ -96,18 +97,62 @@ const destroyMatches = async (id, user_id) => {
 
 }
 
-// 
-const createComment = async()=>{
+// ---------------------
+const createComment = async (match_id, data) => {
   const token = localStorage.getItem('authToken');
   api.defaults.headers.common.authorization = `Bearer ${token}`
-  const path = ``
-}
-
-
-export const allUser = async(id) => {
-  const resp = await api.get(`/users/${id}`)
+  // What is the route i need to get to create a comment
+  // /matches/:match_id/comments
+  const path = `/matches/${match_id}/comments`
+  console.log(path)
+  const resp = await api.post(
+    path,
+    {
+      comment: data
+    }
+  ) // needs match id and data
   return resp.data
 }
+// now make edit comment
+const editComment = async (match_id, id, data) => {
+  const token = localStorage.getItem('authToken');
+  api.defaults.headers.common.authorization = `Bearer ${token}`
+  // /matches/:match_id/comments/:id
+  const path = `/matches/${match_id}/comments/${id}`
+  const resp = await api.put(
+    path,
+    {
+      comment: data
+    }
+  )
+  return resp.data
+}
+
+// delete comment
+const destroyComment = async (match_id, id) => {
+  const resp = await api.delete(` /matches/${match_id}/comments/${id}`)
+  return resp.data
+}
+// get all comment
+const getAllComment = async (match_id, id) => {
+  const token = localStorage.getItem('authToken');
+  api.defaults.headers.common.authorization = `Bearer ${token}`
+  const resp = `/matches/${match_id}/comments/${id}`
+  return resp.data
+}
+
+export const allUser = async (id) => {
+  const resp = await api.get(`/users/${id}`)
+
+  return resp.data
+}
+
+// component to create are:
+// CreateComment
+// EditComment / can hold DestroyComment
+// GetAllComment
+// gonna start first by GetAllComment
+
 
 export {
   createMatches,
@@ -115,4 +160,20 @@ export {
   readOneMatches,
   updateMatches,
   destroyMatches,
+  createComment,
+  editComment,
+  destroyComment,
+  getAllComment
 }
+
+// now call the function in the export fucntion like that they can be acces to other components
+
+/*
+match_comments GET    /matches/:match_id/comments(.:format)                                                    comments#index
+               POST   /matches/:match_id/comments(.:format)                                                    comments#create
+match_comment  GET    /matches/:match_id/comments/:id(.:format)                                                comments#show
+               PATCH  /matches/:match_id/comments/:id(.:format)                                                comments#update
+               PUT    /matches/:match_id/comments/:id(.:format)                                                comments#update
+               DELETE /matches/:match_id/comments/:id(.:format)                                                comments#destroy
+
+*/

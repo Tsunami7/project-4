@@ -40,5 +40,7 @@ class Match < ApplicationRecord
   # { foreign_key: :foreign_keys_column,
   #   class_name: :ClassName }
 
+  has_many :comments
+
 
 end

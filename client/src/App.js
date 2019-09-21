@@ -19,14 +19,20 @@ import {
   destroyMatches,
   loginUser,
   registerUser,
-  randomUser
+  randomUser,
+  getAllComment,
+  editComment,
+  destroyComment,
+  createComment
 } from './services/api-helper'
 
 import './App.css';
+import GetAllComment from './components/GetAllComment';
 
 class App extends Component {
 
   state = {
+    comment: [],
     matches: [],
     matchForm: {
       userToMatch: 2,
@@ -64,17 +70,19 @@ class App extends Component {
 
   newMatch = async (e) => {
     e.preventDefault()
+    // e.nativeEvent.stopImmediatePropagation()
     this.refreshCurrentUser()
     let userdata = {
       user1_id: this.state.currentUser.user_id,
       user2_id: this.state.matchForm.userToMatch,
     };
     let formdata = { ...this.state.matchForm, ...userdata };
+    console.log(formdata);
     const match = await createMatches(formdata);
     this.setState(prevState => ({
       matches: [...prevState.matches, match],
       matchForm: {
-        comment: ""
+        post_comment: ""
       }
     }))
   }
@@ -134,7 +142,7 @@ class App extends Component {
     const token = await loginUser(this.state.authFormData);
 
     localStorage.setItem("authToken", token)
-    localStorage.setItem("jwt", token)
+    // localStorage.setItem("jwt", token)
     this.setState({
       currentUser: decode(token)
     })
@@ -149,7 +157,7 @@ class App extends Component {
   }
 
   handleLogout = async () => {
-    localStorage.removeItem("jwt");
+    // localStorage.removeItem("jwt");
     localStorage.removeItem("authToken");
     this.setState({
       currentUser: null
@@ -171,12 +179,23 @@ class App extends Component {
     const checkUser = localStorage.getItem("authToken");
     if (checkUser) {
       const user = decode(checkUser);
-      this.getRandomUser();
+      // this.getRandomUser();
       this.setState({
         currentUser: user
       })
     }
   }
+
+  // -----------Comment---------------
+  getAllComments = async() =>{
+    let allComments = await getAllComment();
+    console.log(allComments)
+
+  }
+
+
+
+  // --------------------------
 
   render() {
     const { id } = this.props.match.params
@@ -239,8 +258,9 @@ class App extends Component {
               <MatchCreate
                 handleFormChange={this.handleFormChange}
                 matchForm={this.state.matchForm}
-                newMatches={this.newMatches}
-                randomUser={this.state.randomUser} />
+                newMatch={this.newMatch}
+                randomUser={this.state.randomUser}
+                getRandomUser={this.getRandomUser} />
             )} />
           <Route path={'/matches/:match_id/edit/'}
             render={(props) => {
@@ -269,6 +289,19 @@ class App extends Component {
                 editMatch={this.editMatch}
                 matchForm={this.state.matchForm}
                 deleteMatch={this.deleteMatch} />
+            }}
+          />
+          <Route 
+          // what am i doing here
+          // so im linking my component here to be able to test the route by console.log
+            path='/matches/:match_id/comments/:id'
+            render={(props)=>{
+              let id = props.comment.params.id;
+              const comment = this.state.comment.findAll(id);
+              return <GetAllComment
+              id={id}
+              comment={comment}
+              />
             }}
           />
         </Switch>
@@ -300,4 +333,20 @@ things to do:
 - make sure to console log everything
 - attach this to apihelpers
 - attach these on to front-end 
+*/
+
+/*
+  rails part for comment is not done.
+
+
+    What are you trying to do?
+    connect comments table with the apihelper
+    not sure if anything else has to be done in the back will look it up.
+    What do you need to get, to do what you need to do?
+    need to get rails routes to see if the routes are correct.
+    so far from what i see it is not quiet right i think. '/comments/:id'
+    How do you get, what you need to get?
+    not quiet sure will have to google it and then see if is working if not then is not right
+    In what context, what technogies etc, do you need to search by?
+    rails active record look for has many relationship.
 */
