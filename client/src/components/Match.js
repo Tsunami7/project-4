@@ -15,10 +15,12 @@ class Match extends Component {
   }
 
   filterMatches = (match) => {
+    console.log("FILTER:", this.props.user_id, this.props.current_user.user_id)
     let is_relevant = false;
-    is_relevant = is_relevant || (match.user2_id == this.props.user_id) && (match.user1_id == this.props.current_user.user_id)
-    is_relevant = is_relevant || match.user1_id == (match.user1_id == this.props.user_id) && (match.user2_id == this.props.current_user.user_id)
+    is_relevant = is_relevant || ((match.user2_id == this.props.user_id) && (match.user1_id == this.props.current_user.user_id))
+    is_relevant = is_relevant || ((match.user1_id == this.props.user_id) && (match.user2_id == this.props.current_user.user_id))
     return is_relevant
+    // return true
   }
 
   async componentDidMount() {

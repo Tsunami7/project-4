@@ -16,16 +16,16 @@ const Login = (props) => {
         <div className='login-text-box'>
           <div className='username-box'>
             <p>Username:</p>
-            <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
+            <input className='text-field' name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
           </div>
           <div className='password-box'>
             <p>Password:</p>
-            <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
+            <input className='text-field' name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
           </div>
         </div>
         <hr />
         <div className='login-buttons'>
-          <button>Login</button>
+          <button className='buttons'>Login</button>
           <Link to="/register">Register</Link>
         </div>
       </form>

@@ -193,12 +193,12 @@ class App extends Component {
             {this.state.currentUser
               ?
               <>
-                <Link to='/matches'> Home </Link>
+                <h2><Link to='/matches'> Home </Link></h2>
                 <p>{this.state.currentUser.username}</p>
-                <button onClick={this.handleLogout}>Logout</button>
+                <button className='buttons' onClick={this.handleLogout}>Logout</button>
               </>
               :
-              <button onClick={this.handleLoginButton}>Login / Register</button>
+              <button className='buttons' onClick={this.handleLoginButton}>Login / Register</button>
             }
           </div>
         </header>

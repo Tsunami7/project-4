@@ -7,7 +7,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%)
+  transform: translate(-50%,-45%);
+  border: solid 1px darkgray;
 }
 .login-title{
   font-size: 300%;
@@ -19,6 +20,25 @@ hr{
 .login-text-box{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 100px;
+}
+.register-field{
+  margin: 10px 0;
+}
+.text-field{
+  height: 23px;
+  /* margin: 4px 0; */
+}
+.username-box,
+.password-box{
+  display: flex;
+  margin: 4px 0;
+  justify-content: center;
+  align-content: center;
+  
+}
+.register-field{
+  height: 23px;
+  margin: 4px 0;
 }
