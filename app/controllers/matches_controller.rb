@@ -17,17 +17,21 @@ class MatchesController < ApplicationController
     @matches = @current_user.matches # we put the logic in the user model
 
     # render json: @current_user
-    render json: @matches, include: [:comments]
+    render json: @matches , include: [:user1, :user2]
   end
 
   # GET /matches/1
   def show
     
-    render json: @match, include: [:comments]
+    render json: @match #, include: [:comments]
   end
 
   def random
-    render json: User.random 
+    @random_user = User.random
+    if @random_user.id == @current_user.id
+      @random_user = User.random
+    end
+    render json: @random_user
   end
 
   # POST /matches

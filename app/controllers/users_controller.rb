@@ -4,7 +4,8 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
+    # @users = User.all
+    @users = @current_user.matched_users
 
     render json: @users
   end
