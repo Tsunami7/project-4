@@ -1,52 +1,70 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 
+
+
+
 class Match extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isEdit: false
+      matches: [],
+      // matched_users: [],
+      post_comment: ''
     }
   }
 
-  componentDidMount() {
-    this.props.mountEditForm(this.props.id);
+  filterMatches = (match) => {
+    let is_relevant = false;
+    is_relevant = is_relevant || (match.user2_id == this.props.user_id) && (match.user1_id == this.props.current_user.user_id)
+    is_relevant = is_relevant || match.user1_id == (match.user1_id == this.props.user_id) && (match.user2_id == this.props.current_user.user_id)
+    return is_relevant
   }
+
+  async componentDidMount() {
+    // get matches from 
+    await this.props.getMatches(this.props.user_id)
+    // filter by user id of user shown
+    let filtered_matches = this.props.matches.filter(this.filterMatches);
+    // console.log("Match.js props", this.props)
+    console.log("props matches", this.props.matches)
+    console.log("filtered_matches", filtered_matches)
+    this.setState({
+      matches: filtered_matches
+    })
+  }
+
 
   render(props) {
 
-    const { match } = this.props;
+    const { matches } = this.state;
     return (
       <div className="match-page">
-        {match === undefined ? <h2>Loading . . .</h2> : (
+        {matches.length === 0 ? <h2>Loading . . .</h2> : (
           <div>
-
-            <p>{match.comments}</p>
-            <hr />
-            <button onClick={() => {
-              this.setState({
-                isEdit: true
-              })
-              this.props.history.push(`/matches/${match.params.id}/edit`)
-              // console.log('match not working', match)
-              // console.log('match not working', match.params.id)
-            }}>Edit</button>
-            <button onClick={() => {
-              this.props.deleteMatch(match.params.id);//delete issues working
-              console.log(match)
-              this.props.history.push('/matches')
-            }}>Delete</button>
+            {this.state.matches.map(match => (
+              <div
+                key={match.id}
+                className="match-card">
+                <p>{match.post_comment}</p>
+                <p>- {match.user1.username}</p>
+                <button onClick={() => {
+                  this.setState({
+                    isEdit: true
+                  })
+                  this.props.mountEditForm(match.id);
+                  this.props.history.push(`/matches/${match.id}/edit`)
+                }}>Edit</button>
+                <button onClick={() => {
+                  this.props.deleteMatch(match.id);
+                  this.props.history.push('/matches')
+                }}>Delete</button>
+              </div>
+            ))}
             
           </div>)}
       </div>)
   }
 }
 
-// in order to create comment i need to set the api helper route
-// api helper function to create posts
-
-
-
-// then come to match.js to connect the route for creating the comment
-// 
   export default withRouter(Match);

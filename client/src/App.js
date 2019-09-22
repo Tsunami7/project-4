@@ -19,15 +19,10 @@ import {
   destroyMatches,
   loginUser,
   registerUser,
-  randomUser,
-  getAllComment,
-  editComment,
-  destroyComment,
-  createComment
+  randomUser
 } from './services/api-helper'
 
 import './App.css';
-import GetAllComment from './components/GetAllComment';
 
 class App extends Component {
 
@@ -65,19 +60,16 @@ class App extends Component {
     this.setState({
       currentUser: decode(token)
     })
-    // console.log(this.state.currentUser)
   }
 
   newMatch = async (e) => {
     e.preventDefault()
-    // e.nativeEvent.stopImmediatePropagation()
     this.refreshCurrentUser()
     let userdata = {
       user1_id: this.state.currentUser.user_id,
       user2_id: this.state.matchForm.userToMatch,
     };
     let formdata = { ...this.state.matchForm, ...userdata };
-    console.log(formdata);
     const match = await createMatches(formdata);
     this.setState(prevState => ({
       matches: [...prevState.matches, match],
@@ -85,6 +77,7 @@ class App extends Component {
         post_comment: ""
       }
     }))
+    this.getRandomUser(); 
   }
 
   editMatch = async (match_id) => {
@@ -93,15 +86,11 @@ class App extends Component {
     try {
       const user_id = currentUser.user_id
       await updateMatches(user_id, match_id, matchForm)
-      // console.log(user_id)
-      console.log(match_id)
-      // console.log(matchForm)
 
       this.setState(prevState => ({
         matches: prevState.matches.map(match => match.id === match_id ? matchForm : match)
       }))
     } catch (error) {
-      // console.error("Probably not logged in", error)
     }
   }
 
@@ -132,8 +121,6 @@ class App extends Component {
     return match
   }
 
-  // -------------- AUTH ------------------
-
   handleLoginButton = () => {
     this.props.history.push("/login")
   }
@@ -142,7 +129,6 @@ class App extends Component {
     const token = await loginUser(this.state.authFormData);
 
     localStorage.setItem("authToken", token)
-    // localStorage.setItem("jwt", token)
     this.setState({
       currentUser: decode(token)
     })
@@ -157,7 +143,6 @@ class App extends Component {
   }
 
   handleLogout = async () => {
-    // localStorage.removeItem("jwt");
     localStorage.removeItem("authToken");
     this.setState({
       currentUser: null
@@ -179,30 +164,27 @@ class App extends Component {
     const checkUser = localStorage.getItem("authToken");
     if (checkUser) {
       const user = decode(checkUser);
-      // this.getRandomUser();
-      this.setState({
+      await this.setState({
         currentUser: user
       })
     }
+    console.log("user", this.state.currentUser)
   }
 
-  // -----------Comment---------------
-  getAllComments = async() =>{
-    let allComments = await getAllComment();
-    console.log(allComments)
-
+  getMatches = async (id) => {
+    const matches = await readAllMatches(id);
+    console.log('getMatches', matches)
+    this.setState({
+      matches: matches
+    })
   }
-
-
-
-  // --------------------------
 
   render() {
     const { id } = this.props.match.params
     return (
-      <div>
+      <div className='app-container'>
         <header>
-          <h1><Link to='/' onClick={() => this.setState({
+          <h1 className='main-title'><Link to='/' onClick={() => this.setState({
             matchForm: {
               comment: "",
             }
@@ -218,7 +200,6 @@ class App extends Component {
               :
               <button onClick={this.handleLoginButton}>Login / Register</button>
             }
-            {/* <Link>Home</Link> */}
           </div>
         </header>
 
@@ -243,6 +224,7 @@ class App extends Component {
           exact path="/matches"
           render={() => (
             <Matches
+              currentUser={this.state.currentUser}
               id={id}
               mountEditForm={this.mountEditForm}
               matches={this.state.matches}
@@ -277,31 +259,20 @@ class App extends Component {
             }} />
 
           <Route
-            path="/matches/:id"
+            path="/user/:user_id/matches"
             render={(props) => {
-              let id = props.match.params.id;
-              const match = this.state.matches.find(el => el.id === parseInt(id));
+              // let id = props.match.params.id;
+              // const match = this.state.matches.find(el => el.id === parseInt(id));
               return <Match
-                id={id}
-                match={match}
+                current_user={this.state.currentUser}
+                user_id={props.match.params.user_id}
+                matches={this.state.matches}
                 handleFormChange={this.handleFormChange}
                 mountEditForm={this.mountEditForm}
                 editMatch={this.editMatch}
                 matchForm={this.state.matchForm}
-                deleteMatch={this.deleteMatch} />
-            }}
-          />
-          <Route 
-          // what am i doing here
-          // so im linking my component here to be able to test the route by console.log
-            path='/matches/:match_id/comments/:id'
-            render={(props)=>{
-              let id = props.comment.params.id;
-              const comment = this.state.comment.findAll(id);
-              return <GetAllComment
-              id={id}
-              comment={comment}
-              />
+                deleteMatch={this.deleteMatch} 
+                getMatches={this.getMatches}/>
             }}
           />
         </Switch>
@@ -312,41 +283,3 @@ class App extends Component {
 
 export default withRouter(App);
 
-
-/*
-So user will make a match then user will be able to write a comment. Then post this comment and then should be able to edit this post and then delete this post.
-*/
-
-/*
-things done:
-- got a home link for user login
-- fix value warning for updting message
-- fix the routing issues when i used updateMatches from apihelper had to add params.id from id in match.js 
-
-- to generate new table:
-  rails g scaffold Comment 
-*/
-
-/*
-things to do:
-- create new table for comments
-- make sure to console log everything
-- attach this to apihelpers
-- attach these on to front-end 
-*/
-
-/*
-  rails part for comment is not done.
-
-
-    What are you trying to do?
-    connect comments table with the apihelper
-    not sure if anything else has to be done in the back will look it up.
-    What do you need to get, to do what you need to do?
-    need to get rails routes to see if the routes are correct.
-    so far from what i see it is not quiet right i think. '/comments/:id'
-    How do you get, what you need to get?
-    not quiet sure will have to google it and then see if is working if not then is not right
-    In what context, what technogies etc, do you need to search by?
-    rails active record look for has many relationship.
-*/

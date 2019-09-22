@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import UserProfile from "./UserProfile"
 
 class MatchCreate extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     // this.state={
     //   userToMatch: 2,
@@ -20,6 +20,7 @@ class MatchCreate extends React.Component {
       this.props.getRandomUser();
     }
   }
+
 
   render() {
     return (
@@ -41,7 +42,9 @@ class MatchCreate extends React.Component {
           {/* <p>{props.matchForm.userToMatch}</p> */}
           <button>Yes</button>
         </form>
-        <button>No</button>
+        <button
+          onClick={this.props.getRandomUser}
+        >No</button>
 
       </div >
     )

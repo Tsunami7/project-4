@@ -59,12 +59,12 @@ const createMatches = async (data) => {
   return false
 }
 
-const readAllMatches = async (data, id) => {
+const readAllMatches = async (id) => {
   // console.log('matches',data)
   const token = localStorage.getItem('authToken');
   api.defaults.headers.common.authorization = `Bearer ${token}`
   const resp = await api.get(`/users/${id}/matches`) // need to send JWT
-  console.log('ReadAllMatches',resp)
+  console.log('ReadAllMatches', resp)
   // console.log(resp.data[0].post_comment)
 
   return resp.data
@@ -143,6 +143,15 @@ const getAllComment = async (match_id, id) => {
 
 export const allUser = async (id) => {
   const resp = await api.get(`/users/${id}`)
+
+  return resp.data
+}
+
+export const readMatchedUsers = async () => {
+  const token = localStorage.getItem('authToken');
+  api.defaults.headers.common.authorization = `Bearer ${token}`
+  const resp = await api.get(`/users`) // need to send JWT
+  console.log('readMatchedUsers', resp)
 
   return resp.data
 }
