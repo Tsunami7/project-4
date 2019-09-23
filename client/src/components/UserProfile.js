@@ -6,7 +6,7 @@ function UserProfile(props) {
     return (
         <div>
             <img className='user-images' src={props.user.image_link} alt=''></img>
-            <p>check user social here: <a href={props.user.social_url}>{props.user.social_url}</a></p>
+            <h3 className='social-text'>Check User Social Here: <a href={props.user.social_url} target="_blank">{props.user.social_url}</a></h3>
         </div >
     )
 }

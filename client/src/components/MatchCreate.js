@@ -30,9 +30,10 @@ class MatchCreate extends React.Component {
         {/* <h2>Create a new match</h2> */}
         <form onSubmit={this.props.newMatch}>
           {/* <p>{match.comments}</p> */}
-          <p>Write Message</p>
+          <h2 className='message-title'>Write a Message below: </h2>
           <input
 
+            className='message-box'
             type="text"
             name="post_comment"
             value={this.props.matchForm.value}
@@ -40,9 +41,10 @@ class MatchCreate extends React.Component {
 
           <br />
           {/* <p>{props.matchForm.userToMatch}</p> */}
-          <button>Yes</button>
+          <button className='buttons'>Yes</button>
         </form>
         <button
+          className='buttons'
           onClick={this.props.getRandomUser}
         >No</button>
 

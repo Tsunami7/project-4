@@ -43,30 +43,39 @@ class Match extends Component {
     return (
       <div className="match-page">
         {matches.length === 0 ? <h2>Loading . . .</h2> : (
-          <div>
+          <div className='test'>
             {this.state.matches.map(match => (
               <div
                 key={match.id}
                 className="match-card">
-                <p>{match.post_comment}</p>
-                <p>- {match.user1.username}</p>
-                <button onClick={() => {
-                  this.setState({
-                    isEdit: true
-                  })
-                  this.props.mountEditForm(match.id);
-                  this.props.history.push(`/matches/${match.id}/edit`)
-                }}>Edit</button>
-                <button onClick={() => {
+
+                <div>
+                <h3 className='message-from-user'><h2 className='username-left-msg'>{match.user1.username}</h2>left you a message</h3>
+                <p className="the-message">{match.post_comment}</p>
+                </div>
+
+                <button
+                  className='buttons'
+                  onClick={() => {
+                    this.setState({
+                      isEdit: true
+                    })
+                    this.props.mountEditForm(match.id);
+                    this.props.history.push(`/matches/${match.id}/edit`)
+                  }}>Edit</button>
+                <button 
+                className='buttons'
+                onClick={() => {
                   this.props.deleteMatch(match.id);
                   this.props.history.push('/matches')
                 }}>Delete</button>
+
               </div>
             ))}
-            
+
           </div>)}
       </div>)
   }
 }
 
-  export default withRouter(Match);
+export default withRouter(Match);

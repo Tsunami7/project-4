@@ -52,14 +52,6 @@
 }
 
 body {
-  /*background-color: #3E69C3;
-  height: 100vh;
-  background-image: linear-gradient(120deg, #3498db, #8e44ad); 
-  background-image: url(http://scarbroughstudios.com/img/codepen.svg);
-  background-position: center center;
-  background-size: 500px;  
-  @include animation(scrollBad 5s linear infinite);
-  */
   background-color: #3e69c3;
   position: fixed;
   background: url(http://scarbroughstudios.com/img/codepen.svg);
@@ -93,8 +85,84 @@ body {
 }
 .buttons {
   font-size: 100%;
-  margin: 0 10px;
+  margin: 10px 10px;
   padding: 2px 10px;
   border-radius: 3px;
+  transition: background-color .5s;
 }
+.home-title{
+  margin: 10px 0;
+  font-size: 2rem;
+}
+.user-name-title{
+  font-size: 1.3rem;
+  margin: 20px 10px;
+  color: rgb(226, 15, 15);
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.matches-title{
+  margin: 20px 0;
+}
+.match-user-card{
+  /* border: 1px solid red; */
+  margin: 20px;
+}
+.users-name{
+  color: rgba(165, 42, 202, 0.952);
+  font-weight: bolder;
+  text-decoration: underline;
+}
+li{
+  list-style-type: square;
+}
+.buttons-logout{
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  font-size: 100%;
+  margin: 10px 10px;
+  padding: 2px 10px;
+  border-radius: 3px;
+  transition: background-color .5s;
+}
+.buttons:hover{
+  background-color: red;
+}
+.buttons-logout:hover{
+  background-color: red;
+}
+.message-box{
+  height: 26px;
+  width: 400px;
+  margin-top: 20px;
+}
+.message-title{
+  margin-top: 20px;
+}
+.message-from-user{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: baseline;
+}
+.username-left-msg{
+  margin-right: 10px;
+}
+.the-message{
+  font-size: 2rem;
+  font-style: italic;
+  color: rgb(207, 51, 11);
+}
+.match-description{
+  height: 23px;
+  margin: 4px 0;
+}
+.test{
+  overflow: scroll;
+}
+
 

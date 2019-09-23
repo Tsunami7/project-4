@@ -52,7 +52,8 @@ class Matches extends React.Component {
             <p>{match.post_comment}</p>
           </div>
         ))} */}
-        <h2>Your Matches</h2>
+        <h2 className='matches-title'>Your Matches</h2>
+        <h3> Comments from: </h3>
         {this.state.matched_users.length === 0 ? <p>You don't have any matches yet, create one below</p>:<p></p>}
         {this.state.matched_users.map(match => (
           <div
@@ -63,7 +64,7 @@ class Matches extends React.Component {
 
               window.scrollTo(0, 0);
             }}>
-            <p>{match.username}</p>
+            <h2 className='users-name'><li>{match.username}</li></h2>
           </div>
         ))}
         <div
@@ -73,7 +74,8 @@ class Matches extends React.Component {
             alt="Create a new match"
             src="https://image.flaticon.com/icons/png/512/14/14980.png"
             className="plus-sign" />
-          <h3>Create a new match</h3>
+            <h3>New Matches</h3>
+          <h3>Click Here</h3>
         </div>
       </div>
     )
